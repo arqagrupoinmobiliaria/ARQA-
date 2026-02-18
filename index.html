@@ -154,6 +154,42 @@ h2{
   margin:0 15px 20px;
   color:#666;
 }
+  /* CONTACTO */
+.contacto{
+  padding:80px 8%;
+  text-align:center;
+  background:#f5f5f5;
+}
+
+.contact-buttons{
+  margin-top:30px;
+}
+
+.btn-contacto{
+  display:inline-block;
+  margin:10px;
+  padding:15px 30px;
+  background:#0F1F2E;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  transition:0.3s;
+  font-weight:600;
+}
+
+.btn-contacto:hover{
+  background:#1f3b57;
+}
+
+.btn-contacto.whatsapp{
+  background:#25D366;
+}
+
+.btn-contacto.whatsapp:hover{
+  background:#1ebe5d;
+}
+
+</style>
 </style>
 </head>
 
@@ -259,6 +295,16 @@ botones.forEach(btn=>{
   });
 });
 </script>
+  <!-- CONTACTO -->
+<section id="contacto" class="contacto">
+  <h2>Contáctanos</h2>
+  <p>Escríbenos y te respondemos a la brevedad.</p>
+
+  <div class="contact-buttons">
+    <a href="mailto:mauricio.leser@gmail.com" class="btn-contacto">Enviar correo</a>
+    <a href="https://wa.me/593997241108" target="_blank" class="btn-contacto whatsapp">WhatsApp</a>
+  </div>
+</section>
 </body>
 </html>
 
