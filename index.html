@@ -166,19 +166,21 @@ h2{
 
 <!-- HERO SLIDER -->
 <div class="hero">
-<div class="slide active" style="background-image:url('quito.jpg');"></div>
-<div class="slide" style="background-image:url('guayaquil.jpg');"></div>
-<div class="slide" style="background-image:url('cuenca.jpg');"></div>
-<div class="overlay"></div>
 
-<div class="hero-content">
-<h1>Proyectos bien pensados.<br>Bien construidos.</h1>
-<p>
-Desarrollamos proyectos residenciales, industriales y comerciales con visión técnica y financiera.
-Integramos arquitectura, planificación estratégica y control constructivo para garantizar resultados sólidos y sostenibles.
-</p>
-<a href="#proyectos" class="btn">Ver proyectos</a>
-</div>
+    <div class="slide active" style="background-image:url('quito.jpg');"></div>
+    <div class="slide" style="background-image:url('guayaquil.jpg');"></div>
+    <div class="slide" style="background-image:url('cuenca.jpg');"></div>
+
+    <div class="overlay"></div>
+
+    <div class="hero-content">
+        <h1>Proyectos bien pensados.<br>Bien construidos.</h1>
+        <p>
+            Desarrollamos proyectos residenciales, industriales, comerciales y rehabilitación patrimonial con visión técnica y financiera.
+        </p>
+        <a href="#proyectos" class="btn">Ver proyectos</a>
+    </div>
+
 </div>
 
 <!-- PROYECTOS -->
@@ -232,8 +234,6 @@ setInterval(()=>{
   slides[index].classList.add("active");
 },5000);
 
-
-<script>
 const botones = document.querySelectorAll(".filtros button");
 const proyectos = document.querySelectorAll(".grid .proyecto");
 
