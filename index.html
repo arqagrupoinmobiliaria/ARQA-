@@ -189,6 +189,7 @@ Integramos arquitectura, planificación estratégica y control constructivo para
 <button data-filter="residencial">Residencial</button>
 <button data-filter="industrial">Industrial</button>
 <button data-filter="comercial">Comercial</button>
+<button data-filter="patrimonial">Patrimonial</button>
 </div>
 
 <div class="grid">
@@ -210,7 +211,11 @@ Integramos arquitectura, planificación estratégica y control constructivo para
 <h3>Centro Comercial Urbano</h3>
 <p>Proyecto comercial – Guayaquil</p>
 </div>
-
+  
+<div class="proyecto patrimonial">
+<img src="patrimonial1.jpg">
+<h3>Rehabilitación Centro Histórico</h3>
+<p>Proyecto patrimonial – Quito</p>
 </div>
 </section>
 
@@ -227,34 +232,31 @@ setInterval(()=>{
 },5000);
 
 
-/* FILTRO PROYECTOS */
+<script>
 const botones = document.querySelectorAll(".filtros button");
-const proyectos = document.querySelectorAll(".proyecto");
+const proyectos = document.querySelectorAll(".grid .proyecto");
 
 botones.forEach(btn=>{
-btn.addEventListener("click",()=>{
-document.querySelector(".filtros button.active").classList.remove("active");
-btn.classList.add("active");
-let filtro = btn.getAttribute("data-filter");
+  btn.addEventListener("click", ()=>{
 
-proyectos.forEach(p=>{
-if(filtro==="all"){
-p.style.display="block";
-}else{
-p.classList.contains(filtro)?
-p.style.display="block":
-p.style.display="none";
-}
-});
-});
-});
+    document.querySelector(".filtros button.active").classList.remove("active");
+    btn.classList.add("active");
 
+    let filtro = btn.getAttribute("data-filter");
+
+    proyectos.forEach(p=>{
+      if(filtro === "all"){
+        p.style.display = "block";
+      } else if(p.classList.contains(filtro)){
+        p.style.display = "block";
+      } else {
+        p.style.display = "none";
+      }
+    });
+
+  });
+});
 </script>
-
 </body>
 </html>
-quito.jpg
-guayaquil.jpg
-residencial1.jpg
-industrial1.jpg
-comercial1.jpg
+
