@@ -341,3 +341,10 @@ img{max-width:100%; display:block}
   box-shadow: 0 0 0 6px rgba(37,211,102,.12);
 }
 .wa-text{font-size:13px; font-weight:600; color:#15202c}
+
+.hero__tagline{
+  margin:10px 0 5px;
+  font-size:16px;
+  letter-spacing:1px;
+  opacity:.9;
+}
