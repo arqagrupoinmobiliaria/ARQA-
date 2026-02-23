@@ -101,9 +101,9 @@ h2{
   <!-- BOTONES -->
   <div class="filtros">
     <button data-filter="all" class="active">Todos</button>
-    <button data-filter="residencial">Proyecto Residencial</button>
-    <button data-filter="industrial">Proyecto Industriale</button>
-    <button data-filter="comercial">Proyecto Comerciale</button>
+    <button data-filter="residencial">Proyectos Residenciales</button>
+    <button data-filter="industrial">Proyectos Industriales</button>
+    <button data-filter="comercial">Proyectos Comerciales</button>
     <button data-filter="patrimonial">Proyectos Patrimoniales</button>
   </div>
 
@@ -176,36 +176,34 @@ h2{
         <p>Próximamente nuevos proyectos patrimoniales.</p>
     </div>
 
-
 <script>
+  const botones = document.querySelectorAll(".filtros button");
+  const proyectos = document.querySelectorAll(".proyecto");
 
-/* FILTRO SIMPLE */
+  botones.forEach(boton => {
+    boton.addEventListener("click", function () {
 
-const botones = document.querySelectorAll(".filtros button");
-const proyectos = document.querySelectorAll(".proyecto");
+      // Quitar active de todos
+      botones.forEach(btn => btn.classList.remove("active"));
 
-botones.forEach(boton => {
-    boton.addEventListener("click", () => {
+      // Activar botón actual
+      this.classList.add("active");
 
-        botones.forEach(b => b.classList.remove("active"));
-        boton.classList.add("active");
+      const filtro = this.getAttribute("data-filter");
 
-        const filtro = boton.getAttribute("data-filter");
+      proyectos.forEach(proyecto => {
 
-       proyectos.forEach(p => {
-    if(filtro === "all"){
-        p.style.display = "block";
-    } else if(p.classList.contains(filtro)){
-        p.style.display = "block";
-    } else {
-        p.style.display = "none";
-    }
-});
-});
+        if (proyecto.classList.contains(filtro)) {
+          proyecto.style.display = "block";
+        } else {
+          proyecto.style.display = "none";
+        }
 
+      });
 
+    });
+  });
 
+  // Mostrar residencial por defecto
+  document.querySelector('[data-filter="residencial"]').click();
 </script>
-
-</body>
-</html>
