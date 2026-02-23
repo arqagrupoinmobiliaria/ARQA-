@@ -1,266 +1,336 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARQA | Grupo Inmobiliario</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ARQA | Grupo Inmobiliario</title>
 
-<style>
+  <style>
+    body{
+      margin:0;
+      font-family: Arial, sans-serif;
+      background:#ffffff;
+      color:#0F1F2E;
+    }
 
-/* ---------- ESTILO GENERAL ---------- */
+    /* HEADER */
+    header{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      padding:18px 20px;
+      background:#fff;
+      border-bottom:1px solid #eee;
+    }
+    header img{
+      height:70px; /* aquí controlas tamaño del logo */
+    }
 
-body{
-    margin:0;
-    font-family:'Segoe UI', sans-serif;
-    background:#f4f6f9;
-    color:#1a1a1a;
-}
+    /* HERO */
+    .hero{
+      position:relative;
+      height:70vh;
+      overflow:hidden;
+      display:flex;
+      align-items:center;
+      color:white;
+    }
+    .slide{
+      position:absolute;
+      inset:0;
+      background-size:cover;
+      background-position:center;
+      opacity:0;
+      transition:opacity 1s ease-in-out;
+    }
+    .slide.active{ opacity:1; }
 
-h2{
-    text-align:center;
-    margin-bottom:40px;
-}
+    .overlay{
+      position:absolute;
+      inset:0;
+      background:rgba(0,0,0,0.45);
+    }
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:900px;
+      padding:0 8%;
+    }
+    .hero-content h1{
+      margin:0 0 12px 0;
+      font-size:42px;
+      line-height:1.1;
+    }
+    .hero-content p{
+      margin:0 0 18px 0;
+      max-width:650px;
+      font-size:16px;
+      opacity:0.95;
+    }
+    .btn{
+      display:inline-block;
+      padding:12px 18px;
+      border-radius:28px;
+      background:#ffffff;
+      color:#0F1F2E;
+      text-decoration:none;
+      font-weight:700;
+    }
 
-/* ---------- HEADER ---------- */
+    /* SECCIÓN PROYECTOS */
+    #proyectos{
+      padding:70px 8%;
+      background:#fafafa;
+    }
+    #proyectos h2{
+      text-align:center;
+      margin:0 0 18px 0;
+      font-size:28px;
+    }
 
-header{
-    background:white;
-    padding:25px;
-    text-align:center;
-    box-shadow:0 2px 15px rgba(0,0,0,0.05);
-}
+    .filtros{
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      flex-wrap:wrap;
+      margin:0 0 28px 0;
+    }
+    .filtros button{
+      border:1px solid #dcdcdc;
+      background:#fff;
+      color:#0F1F2E;
+      padding:10px 16px;
+      border-radius:24px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .filtros button.active{
+      background:#0F1F2E;
+      color:#fff;
+      border-color:#0F1F2E;
+    }
 
-header img{
-    height:60px;
-}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
+      gap:18px;
+      max-width:1200px;
+      margin:0 auto;
+    }
 
-/* ---------- SECCION PROYECTOS ---------- */
+    .proyecto{
+      background:#fff;
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 10px 26px rgba(0,0,0,0.08);
+      display:none; /* el JS decide qué mostrar */
+    }
 
-#proyectos{
-    padding:70px 8%;
-}
+    .proyecto img{
+      width:50%;
+      height:170px;
+      object-fit:cover;
+      display:block;
+    }
 
-.filtros{
-    text-align:center;
-    margin-bottom:50px;
-}
+    .contenido{
+      padding:14px 14px 16px;
+    }
+    .contenido h3{
+      margin:0 0 8px 0;
+      font-size:16px;
+    }
+    .ubicacion{
+      font-size:12px;
+      color:#666;
+      margin-bottom:8px;
+    }
+    .descripcion{
+      font-size:13px;
+      color:#444;
+      line-height:1.35;
+    }
 
-.filtros button{
-    padding:10px 20px;
-    margin:5px;
-    border-radius:30px;
-    border:1px solid #ccc;
-    background:white;
-    cursor:pointer;
-    transition:0.3s;
-    font-weight:500;
-}
+    /* CONTACTO */
+    .contacto{
+      padding:70px 8%;
+      text-align:center;
+      background:#f5f5f5;
+    }
+    .contacto h2{
+      margin:0 0 10px 0;
+      font-size:26px;
+    }
+    .contacto p{
+      margin:0 0 22px 0;
+      color:#555;
+    }
+    .contact-buttons{
+      display:flex;
+      gap:12px;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    .btn-contacto{
+      display:inline-block;
+      padding:12px 20px;
+      border-radius:26px;
+      text-decoration:none;
+      font-weight:700;
+      background:#0F1F2E;
+      color:#fff;
+    }
+    .btn-contacto:hover{
+      filter:brightness(1.1);
+    }
+    .btn-contacto.whatsapp{
+      background:#25D366;
+      color:#fff;
+    }
 
-.filtros button:hover,
-.filtros button.active{
-    background:#0F1F2E;
-    color:white;
-}
-
-/* ---------- GRID ---------- */
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit, minmax(300px,1fr));
-    gap:40px;
-}
-
-/* ---------- TARJETA PROYECTO ---------- */
-
-.proyecto{
-    background:white;
-    border-radius:18px;
-    overflow:hidden;
-    box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.proyecto:hover{
-    transform:translateY(-8px);
-    box-shadow:0 20px 40px rgba(0,0,0,0.15);
-}
-
-.proyecto img{
-    width:20%;
-    height:100px;
-    object-fit:cover;
-    border-bottom:1px solid #eee;
-}
-
-.proyecto .contenido{
-    padding:25px;
-}
-
-.proyecto h3{
-    margin-top:0;
-    margin-bottom:10px;
-}
-
-.ubicacion{
-    font-size:14px;
-    color:#666;
-    margin-bottom:10px;
-}
-
-.descripcion{
-    font-size:14px;
-    line-height:1.5;
-}
-
-/* ---------- CONTACTO ---------- */
-
-#contacto{
-    margin-top:100px;
-    padding:70px 8%;
-    text-align:center;
-    background:white;
-}
-
-.btn{
-    display:inline-block;
-    padding:12px 28px;
-    border-radius:30px;
-    margin:10px;
-    text-decoration:none;
-    font-weight:600;
-}
-
-.btn-correo{
-    background:#0F1F2E;
-    color:white;
-}
-
-.btn-whatsapp{
-    background:#25D366;
-    color:white;
-}
-
-</style>
+    footer{
+      text-align:center;
+      padding:16px;
+      font-size:12px;
+      color:#777;
+      background:#fff;
+      border-top:1px solid #eee;
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-<img src="logo.png">
-</header>
+  <!-- HEADER -->
+  <header>
+    <img src="logo.png" alt="ARQA Grupo Inmobiliario">
+  </header>
 
-<section id="proyectos">
+  <!-- HERO SLIDER -->
+  <div class="hero">
+    <div class="slide active" style="background-image:url('quito.jpg');"></div>
+    <div class="slide" style="background-image:url('guayaquil.jpg');"></div>
+    <div class="slide" style="background-image:url('cuenca.jpg');"></div>
 
-<h2>Nuestros Proyectos</h2>
+    <div class="overlay"></div>
 
-<div class="filtros">
-<button class="active" data-filter="all">Todos</button>
-<button data-filter="residencial">Residencial</button>
-<button data-filter="industrial">Industrial</button>
-<button data-filter="comercial">Comercial</button>
-<button data-filter="patrimonial">Patrimonial</button>
-</div>
-
-<div class="grid">
-
-<!-- RESIDENCIAL -->
-<div class="proyecto residencial">
-    <img src="residencial1.jpg">
-
-    <div class="contenido">
-        <h3>Casa Conjunto Residencial Villa Vega</h3>
-        <div class="ubicacion">📍 Tumbaco – Quito, Ecuador</div>
-        <div class="descripcion">
-            Proyecto residencial de 22 casas pareadas de 160 m²
-            con diseño contemporáneo, áreas verdes y espacios amplios.
-        </div>
+    <div class="hero-content">
+      <h1>Proyectos bien pensados.<br>Bien construidos.</h1>
+      <p>
+        Desarrollamos proyectos residenciales, industriales, comerciales y patrimoniales con visión técnica y financiera.
+      </p>
+      <a class="btn" href="#proyectos">Ver proyectos</a>
     </div>
-</div>
+  </div>
 
-<!-- INDUSTRIAL -->
-<div class="proyecto industrial">
-    <img src="industrial1.jpg">
-    <div class="contenido">
-        <h3>Nave Industrial Norte</h3>
-        <div class="ubicacion">📍 Quito – Ecuador</div>
-        <div class="descripcion">
-            Desarrollo industrial con estructura metálica,
-            optimización logística y gran capacidad de almacenamiento.
-        </div>
+  <!-- PROYECTOS -->
+  <section id="proyectos">
+    <h2>Nuestros Proyectos</h2>
+
+    <div class="filtros">
+      <button class="active" data-filter="all">Todos</button>
+      <button data-filter="residencial">Residencial</button>
+      <button data-filter="industrial">Industrial</button>
+      <button data-filter="comercial">Comercial</button>
+      <button data-filter="patrimonial">Patrimonial</button>
     </div>
-</div>
 
-<!-- COMERCIAL -->
-<div class="proyecto comercial">
-    <img src="comercial1.jpg">
-    <div class="contenido">
-        <h3>Centro Comercial Urbano</h3>
-        <div class="ubicacion">📍 Guayaquil – Ecuador</div>
-        <div class="descripcion">
-            Proyecto comercial moderno con locales estratégicos
-            y alto flujo peatonal.
+    <div class="grid">
+
+      <!-- RESIDENCIAL -->
+      <div class="proyectos residenciales">
+        <img src="residencial1.jpg" alt="Proyecto residencial">
+        <div class="contenido">
+          <h3> Conjunto Residencial Villa Vega</h3>
+          <div class="ubicacion">📍 Tumbaco – Quito, Ecuador</div>
+          <div class="descripcion">Proyecto residencial de 22 casas pareadas de 160 m².</div>
         </div>
-    </div>
-</div>
+      </div>
 
-<!-- PATRIMONIAL -->
-<div class="proyecto patrimonial">
-    <img src="patrimonial1.jpg">
-    <div class="contenido">
-        <h3>Rehabilitación Centro Histórico</h3>
-        <div class="ubicacion">📍 Quito – Ecuador</div>
-        <div class="descripcion">
-            Intervención patrimonial respetando normativa histórica
-            y conservación arquitectónica.
+      <!-- INDUSTRIAL -->
+      <div class="proyectos industriales">
+        <img src="industrial1.jpg" alt="Proyecto industrial">
+        <div class="contenido">
+          <h3>Nave Industrial Norte</h3>
+          <div class="ubicacion">📍 Quito, Ecuador</div>
+          <div class="descripcion">Desarrollo industrial con estructura metálica y logística optimizada.</div>
         </div>
+      </div>
+
+      <!-- COMERCIAL -->
+      <div class="proyectos comerciales">
+        <img src="comercial1.jpg" alt="Proyecto comercial">
+        <div class="contenido">
+          <h3>Centro Comercial Urbano</h3>
+          <div class="ubicacion">📍 Guayaquil, Ecuador</div>
+          <div class="descripcion">Proyecto comercial moderno con locales estratégicos y alto flujo peatonal.</div>
+        </div>
+      </div>
+
+      <!-- PATRIMONIAL -->
+      <div class="proyectos patrimoniales">
+        <img src="patrimonial1.jpg" alt="Proyecto patrimonial">
+        <div class="contenido">
+          <h3>Rehabilitación Centro Histórico</h3>
+          <div class="ubicacion">📍 Quito, Ecuador</div>
+          <div class="descripcion">Intervención patrimonial respetando materiales, historia y normativa.</div>
+        </div>
+      </div>
+
     </div>
-</div>
+  </section>
 
-</div>
-</section>
+  <!-- CONTACTO -->
+  <section id="contacto" class="contacto">
+    <h2>Contáctanos</h2>
+    <p>Escríbenos y te respondemos a la brevedad.</p>
 
-<section id="contacto">
+    <div class="contact-buttons">
+      <a class="btn-contacto" href="mailto:mauricio.leser@gmail.com">Enviar correo</a>
+      <a class="btn-contacto whatsapp" href="https://wa.me/593997241108" target="_blank">WhatsApp</a>
+    </div>
+  </section>
 
-<h2>Contáctanos</h2>
-<p>Escríbenos y te responderemos a la brevedad.</p>
+  <footer>
+    © ARQA Grupo Inmobiliario — Todos los derechos reservados
+  </footer>
 
-<a href="mailto:mauricio.leser@gmail.com" class="btn btn-correo">
-Enviar correo
-</a>
+  <script>
+    // SLIDER AUTOMÁTICO
+    const slides = document.querySelectorAll(".slide");
+    let index = 0;
 
-<a href="https://wa.me/593997241108" target="_blank" class="btn btn-whatsapp">
-WhatsApp
-</a>
+    setInterval(() => {
+      slides[index].classList.remove("active");
+      index = (index + 1) % slides.length;
+      slides[index].classList.add("active");
+    }, 5000);
 
-</section>
+    // FILTRO PROYECTOS
+    const botones = document.querySelectorAll(".filtros button");
+    const proyectos = document.querySelectorAll(".proyecto");
 
-<script>
+    function mostrar(filtro){
+      proyectos.forEach(p => {
+        if(filtro === "all" || p.classList.contains(filtro)){
+          p.style.display = "block";
+        } else {
+          p.style.display = "none";
+        }
+      });
+    }
 
-/* FILTRO FUNCIONAL */
+    // por defecto: mostrar todos
+    mostrar("all");
 
-const botones = document.querySelectorAll(".filtros button");
-const proyectos = document.querySelectorAll(".proyecto");
-
-botones.forEach(btn=>{
-    btn.addEventListener("click", ()=>{
+    botones.forEach(btn => {
+      btn.addEventListener("click", () => {
         document.querySelector(".filtros button.active").classList.remove("active");
         btn.classList.add("active");
-
-        let filtro = btn.getAttribute("data-filter");
-
-        proyectos.forEach(p=>{
-            if(filtro === "all"){
-                p.style.display="block";
-            }else if(p.classList.contains(filtro)){
-                p.style.display="block";
-            }else{
-                p.style.display="none";
-            }
-        });
+        mostrar(btn.getAttribute("data-filter"));
+      });
     });
-});
-
-</script>
+  </script>
 
 </body>
 </html>
