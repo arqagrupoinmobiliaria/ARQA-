@@ -94,13 +94,53 @@ h2{
 
 <body>
 
-<h2>Nuestros Proyectos</h2>
+<section id="proyectos">
+
+  <h2>Nuestros Proyectos</h2>
+
+  <!-- BOTONES -->
+  <div class="filtros">
+    <button data-filter="all" class="active">Todos</button>
+    <button data-filter="residencial">Proyecto Residencial</button>
+    <button data-filter="industrial">Proyecto Industriale</button>
+    <button data-filter="comercial">Proyecto Comerciale</button>
+    <button data-filter="patrimonial">Proyectos Patrimoniales</button>
+  </div>
+
+  <!-- CONTENEDOR DE PROYECTOS -->
+  <div class="contenedor-proyectos">
+
+    <!-- RESIDENCIAL -->
+    <div class="proyecto residencial">
+      <h3>Proyecto Residencial Villa Vega</h3>
+      <p>22 casas pareadas de 160 m²</p>
+      <p>Tumbaco, Quito - Ecuador</p>
+    </div>
+
+    <!-- INDUSTRIAL -->
+    <div class="proyecto industrial">
+      <h3>Nave Industrial Norte</h3>
+      <p>Desarrollo industrial con estructura metálica</p>
+      <p>Quito, Ecuador</p>
+    </div>
+
+    <!-- COMERCIAL -->
+    <div class="proyecto comercial">
+      <h3>Centro Comercial Urbano</h3>
+      <p>Locales estratégicos y alto flujo peatonal</p>
+      <p>Guayaquil, Ecuador</p>
+    </div>
+
+    <!-- PATRIMONIAL -->
+    <div class="proyecto patrimonial">
+      <h3>Rehabilitación Centro Histórico</h3>
+      <p>Intervención patrimonial respetando normativa</p>
+      <p>Quito, Ecuador</p>
+</div> <!-- cierre contenedor-proyectos -->
+</section>
 
 <div class="filtros">
-    <button class="active" data-filter="residencial">Proyectos Residenciales</button>
-    <button data-filter="industrial">Proyectos Industriales</button>
-    <button data-filter="comercial">Proyectos Comerciales</button>
-    <button data-filter="patrimonial">Proyectos Patrimoniales</button>
+    
 </div>
 
 <div class="grid">
@@ -110,7 +150,7 @@ h2{
         <img src="residencial1.jpg" alt="Residencial Villa Vega">
         <div class="contenido">
             <h3>Proyecto Residencial Villa Vega</h3>
-            <p>22 casas pareadas de 160 m²</p>
+            <p>Proyecto de 22 casas pareadas de 160 m²</p>
             <p>Tumbaco, Quito - Ecuador</p>
         </div>
     <!-- INDUSTRIAL -->
@@ -152,23 +192,18 @@ botones.forEach(boton => {
 
         const filtro = boton.getAttribute("data-filter");
 
-        proyectos.forEach(p => {
-            if(p.classList.contains(filtro)){
-                p.style.display = "block";
-            }else{
-                p.style.display = "none";
-            }
-        });
-
-    });
-});
-
-/* Por defecto mostrar residenciales */
-proyectos.forEach(p => {
-    if(!p.classList.contains("residencial")){
-        p.style.display="none";
+       proyectos.forEach(p => {
+    if(filtro === "all"){
+        p.style.display = "block";
+    } else if(p.classList.contains(filtro)){
+        p.style.display = "block";
+    } else {
+        p.style.display = "none";
     }
 });
+});
+
+
 
 </script>
 
