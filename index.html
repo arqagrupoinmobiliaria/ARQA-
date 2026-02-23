@@ -1,209 +1,318 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ARQA | Grupo Inmobiliario</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ARQA-GRUPO INMOBILIARIO | Visión urbana y desarrollo estratégico</title>
+  <meta name="description" content="ARQA-GRUPO INMOBILIARIO: desarrollo inmobiliario estratégico en Quito, Guayaquil y Cuenca. Proyectos residenciales, comerciales, industriales y patrimoniales." />
+  <meta name="theme-color" content="#0B1C2D" />
 
-<style>
+  <!-- Open Graph -->
+  <meta property="og:title" content="ARQA-GRUPO INMOBILIARIO" />
+  <meta property="og:description" content="Visión urbana y desarrollo estratégico. Quito · Guayaquil · Cuenca" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/img/og-cover.jpg" />
 
-body{
-    margin:0;
-    font-family: 'Segoe UI', sans-serif;
-    background:#f7f8fa;
-    color:#222;
-}
-
-/* TITULO */
-h2{
-    text-align:center;
-    margin-top:60px;
-    font-size:32px;
-}
-
-/* BOTONES PRINCIPALES */
-.filtros{
-    display:flex;
-    justify-content:center;
-    gap:15px;
-    margin:40px 0;
-    flex-wrap:wrap;
-}
-
-.filtros button{
-    padding:12px 20px;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    font-weight:600;
-    background:#e4e6eb;
-    transition:0.3s;
-}
-
-.filtros button.active{
-    background:#0f1f2e;
-    color:white;
-}
-
-/* GRID PROYECTOS */
-.grid{
-    width:90%;
-    max-width:1200px;
-    margin:auto;
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-    gap:30px;
-    margin-bottom:80px;
-}
-
-/* TARJETA PROYECTO */
-.proyecto{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 10px 25px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.proyecto:hover{
-    transform:translateY(-5px);
-}
-
-.proyecto img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.contenido{
-    padding:20px;
-}
-
-.contenido h3{
-    margin:0 0 10px 0;
-}
-
-.contenido p{
-    margin:6px 0;
-    font-size:14px;
-    color:#555;
-}
-
-</style>
+  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
+  <!-- WhatsApp Floating Button -->
+  <a class="wa-float" id="waFloat" target="_blank" rel="noopener"
+     href="https://wa.me/593000000000?text=Hola%2C%20estoy%20interesado%20en%20conocer%20los%20proyectos%20y%20oportunidades%20de%20ARQA-GRUPO%20INMOBILIARIO.">
+    <span class="wa-dot"></span>
+    <span class="wa-text">WhatsApp</span>
+  </a>
 
-<section id="proyectos">
-
-  <h2>Nuestros Proyectos</h2>
-
-  <!-- BOTONES -->
-  <div class="filtros">
-    <button data-filter="all" class="active">Todos</button>
-    <button data-filter="residencial">Proyectos Residenciales</button>
-    <button data-filter="industrial">Proyectos Industriales</button>
-    <button data-filter="comercial">Proyectos Comerciales</button>
-    <button data-filter="patrimonial">Proyectos Patrimoniales</button>
-  </div>
-
-  <!-- CONTENEDOR DE PROYECTOS -->
-  <div class="contenedor-proyectos">
-
-    <!-- RESIDENCIAL -->
-    <div class="proyecto residencial">
-      <h3>Proyecto Residencial Villa Vega</h3>
-      <p>22 casas pareadas de 160 m²</p>
-      <p>Tumbaco, Quito - Ecuador</p>
-    </div>
-
-    <!-- INDUSTRIAL -->
-    <div class="proyecto industrial">
-      <h3>Nave Industrial Norte</h3>
-      <p>Desarrollo industrial con estructura metálica</p>
-      <p>Quito, Ecuador</p>
-    </div>
-
-    <!-- COMERCIAL -->
-    <div class="proyecto comercial">
-      <h3>Centro Comercial Urbano</h3>
-      <p>Locales estratégicos y alto flujo peatonal</p>
-      <p>Guayaquil, Ecuador</p>
-    </div>
-
-    <!-- PATRIMONIAL -->
-    <div class="proyecto patrimonial">
-      <h3>Rehabilitación Centro Histórico</h3>
-      <p>Intervención patrimonial respetando normativa</p>
-      <p>Quito, Ecuador</p>
-</div> <!-- cierre contenedor-proyectos -->
-</section>
-
-<div class="filtros">
-    
-</div>
-
-<div class="grid">
-
-    <!-- PROYECTO RESIDENCIAL VILLA VEGA -->
-    <div class="proyecto residencial">
-        <img src="residencial1.jpg" alt="Residencial Villa Vega">
-        <div class="contenido">
-            <h3>Proyecto Residencial Villa Vega</h3>
-            <p>Proyecto de 22 casas pareadas de 160 m²</p>
-            <p>Tumbaco, Quito - Ecuador</p>
+  <!-- Header -->
+  <header class="header header--transparent" id="siteHeader">
+    <div class="container header__inner">
+      <a class="brand" href="#top" aria-label="ARQA-GRUPO INMOBILIARIO">
+        <img src="assets/img/logo.svg" alt="ARQA-GRUPO INMOBILIARIO" class="brand__logo" />
+        <div class="brand__meta">
+          <div class="brand__name">ARQA-GRUPO INMOBILIARIO</div>
+          <div class="brand__tagline" data-i18n="tagline">Visión urbana y desarrollo estratégico</div>
         </div>
-    <!-- INDUSTRIAL -->
-<div class="proyecto industrial">
-    <div class="contenido">
-        <h3>Proyectos Industriales</h3>
-        <p>Próximamente nuevos desarrollos industriales.</p>
+      </a>
+
+      <nav class="nav" aria-label="Principal">
+        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+        <div class="nav__links" id="navLinks">
+          <a href="#firma" data-i18n="nav_firma">Firma</a>
+          <a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+          <a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a>
+          <a href="#alianzas" data-i18n="nav_alianzas">Alianzas</a>
+          <a href="#contacto" class="nav__cta" data-i18n="nav_contacto">Contacto</a>
+
+          <div class="lang">
+            <button class="lang__btn" id="langES" type="button" aria-pressed="true">ES</button>
+            <button class="lang__btn" id="langEN" type="button" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </nav>
     </div>
-</div>
+  </header>
 
-<!-- COMERCIAL -->
-<div class="proyecto comercial">
-    <div class="contenido">
-        <h3>Proyectos Comerciales</h3>
-        <p>Próximamente nuevos desarrollos comerciales.</p>
-    </div>
-</div>
+  <!-- Top anchor -->
+  <div id="top"></div>
 
-<!-- PATRIMONIAL -->
-<div class="proyecto patrimonial">
-    <div class="contenido">
-        <h3>Proyectos Patrimoniales</h3>
-        <p>Próximamente nuevos proyectos patrimoniales.</p>
+  <!-- Hero Slider -->
+  <section class="hero" aria-label="Slider principal">
+    <div class="hero__slides" id="heroSlides">
+      <!-- slides are set by JS (images + labels) -->
     </div>
 
-<script>
-  const botones = document.querySelectorAll(".filtros button");
-  const proyectos = document.querySelectorAll(".proyecto");
+    <div class="hero__overlay"></div>
 
-  botones.forEach(boton => {
-    boton.addEventListener("click", function () {
+    <div class="container hero__content">
+      <h1 class="hero__title" data-i18n="hero_title">Desarrollo inmobiliario estratégico en Ecuador</h1>
+      <p class="hero__subtitle" data-i18n="hero_subtitle">Quito · Guayaquil · Cuenca</p>
 
-      // Quitar active de todos
-      botones.forEach(btn => btn.classList.remove("active"));
+      <div class="hero__actions">
+        <a class="btn btn--primary" href="#proyectos" data-i18n="hero_btn_projects">Ver Proyectos</a>
+        <a class="btn btn--secondary" href="#alianzas" data-i18n="hero_btn_invest">Invertir</a>
+        <a class="btn btn--ghost" href="#contacto" data-i18n="hero_btn_contact">Contacto</a>
+      </div>
 
-      // Activar botón actual
-      this.classList.add("active");
+      <div class="hero__dots" id="heroDots" aria-label="Indicadores del slider"></div>
+    </div>
+  </section>
 
-      const filtro = this.getAttribute("data-filter");
+  <!-- Firma -->
+  <section class="section" id="firma">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" data-i18n="firma_title">Firma</h2>
+        <p class="section__lead" data-i18n="firma_lead">
+          Somos una firma desarrolladora enfocada en planificación y ejecución de proyectos inmobiliarios estratégicos en Ecuador.
+        </p>
+      </div>
 
-      proyectos.forEach(proyecto => {
+      <div class="grid grid--2">
+        <div class="card">
+          <h3 class="card__title">Marcela Mata</h3>
+          <p class="card__subtitle" data-i18n="firma_marcela_role">Arquitecta – Dirección Arquitectónica</p>
+          <p class="card__text" data-i18n="firma_marcela_text">
+            Lidera el diseño y la planificación técnica de los proyectos, asegurando coherencia urbana, eficiencia espacial y alto estándar arquitectónico.
+          </p>
+        </div>
 
-        if (proyecto.classList.contains(filtro)) {
-          proyecto.style.display = "block";
-        } else {
-          proyecto.style.display = "none";
-        }
+        <div class="card">
+          <h3 class="card__title">Mauricio Leser</h3>
+          <p class="card__subtitle" data-i18n="firma_mauricio_role">Desarrollador Inmobiliario</p>
+          <p class="card__text" data-i18n="firma_mauricio_text">
+            Especializado en estructuración de proyectos, análisis estratégico de suelo y desarrollo integral de activos inmobiliarios con visión de largo plazo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      });
+  <!-- Proyectos / Líneas -->
+  <section class="section section--alt" id="proyectos">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" data-i18n="lines_title">Líneas de Desarrollo</h2>
+        <p class="section__lead" data-i18n="lines_lead">
+          Cuatro verticales claras para atender oportunidades inmobiliarias con criterio técnico y visión estratégica.
+        </p>
+      </div>
 
-    });
-  });
+      <div class="grid grid--4">
+        <article class="tile">
+          <img src="assets/img/cat-residencial.jpg" alt="Proyectos residenciales" class="tile__img" />
+          <div class="tile__body">
+            <h3 class="tile__title" data-i18n="line_res_title">Proyectos Residenciales</h3>
+            <p class="tile__text" data-i18n="line_res_text">Vivienda con enfoque en funcionalidad, ubicación y valorización sostenible.</p>
+            <a class="tile__link" href="#contacto" data-i18n="line_cta">Solicitar información</a>
+          </div>
+        </article>
 
-  // Mostrar residencial por defecto
-  document.querySelector('[data-filter="residencial"]').click();
-</script>
+        <article class="tile">
+          <img src="assets/img/cat-comercial.jpg" alt="Proyectos comerciales" class="tile__img" />
+          <div class="tile__body">
+            <h3 class="tile__title" data-i18n="line_com_title">Proyectos Comerciales</h3>
+            <p class="tile__text" data-i18n="line_com_text">Espacios comerciales estratégicos diseñados para dinamizar zonas y consolidar presencia empresarial.</p>
+            <a class="tile__link" href="#contacto" data-i18n="line_cta">Solicitar información</a>
+          </div>
+        </article>
+
+        <article class="tile">
+          <img src="assets/img/cat-industrial.jpg" alt="Proyectos industriales" class="tile__img" />
+          <div class="tile__body">
+            <h3 class="tile__title" data-i18n="line_ind_title">Proyectos Industriales</h3>
+            <p class="tile__text" data-i18n="line_ind_text">Infraestructura logística e industrial enfocada en eficiencia operativa y expansión.</p>
+            <a class="tile__link" href="#contacto" data-i18n="line_cta">Solicitar información</a>
+          </div>
+        </article>
+
+        <article class="tile">
+          <img src="assets/img/cat-patrimonial.jpg" alt="Proyectos patrimoniales" class="tile__img" />
+          <div class="tile__body">
+            <h3 class="tile__title" data-i18n="line_pat_title">Proyectos Patrimoniales</h3>
+            <p class="tile__text" data-i18n="line_pat_text">Puesta en valor de activos históricos con criterio técnico y coherencia urbana.</p>
+            <a class="tile__link" href="#contacto" data-i18n="line_cta">Solicitar información</a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experiencia Técnica -->
+  <section class="section" id="experiencia">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" data-i18n="exp_title">Experiencia Técnica</h2>
+        <p class="section__lead" data-i18n="exp_lead">
+          Sección práctica para subir proyectos de diseño y construcción progresivamente.
+        </p>
+      </div>
+
+      <div class="grid grid--2">
+        <div class="panel">
+          <div class="panel__top">
+            <h3 class="panel__title" data-i18n="exp_design_title">Diseño Arquitectónico</h3>
+            <p class="panel__text" data-i18n="exp_design_text">Proyectos de diseño y colaboración con otros arquitectos.</p>
+          </div>
+          <div class="panel__media">
+            <img src="assets/img/exp-diseno-1.jpg" alt="Ejemplo de proyecto de diseño" />
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="panel__top">
+            <h3 class="panel__title" data-i18n="exp_build_title">Dirección y Construcción</h3>
+            <p class="panel__text" data-i18n="exp_build_text">Proyectos ejecutados o dirigidos técnicamente.</p>
+          </div>
+          <div class="panel__media">
+            <img src="assets/img/exp-obra-1.jpg" alt="Ejemplo de obra" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Alianzas Estratégicas -->
+  <section class="section section--alt" id="alianzas">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" data-i18n="all_title">Alianzas Estratégicas</h2>
+        <p class="section__lead" data-i18n="all_lead">
+          Invitación profesional a inversionistas y socios para conocer oportunidades y proyectos.
+        </p>
+      </div>
+
+      <div class="callout">
+        <div class="callout__text">
+          <h3 data-i18n="all_box_title">Conversemos sobre oportunidades</h3>
+          <p data-i18n="all_box_text">
+            Promovemos proyectos bajo criterios técnicos y planificación estructurada. Si busca invertir o asociarse, contáctenos para recibir información.
+          </p>
+        </div>
+        <div class="callout__actions">
+          <a class="btn btn--primary" href="#contacto" data-i18n="all_btn">Solicitar información</a>
+          <a class="btn btn--secondary" id="waInline" target="_blank" rel="noopener"
+             href="https://wa.me/593000000000?text=Hola%2C%20deseo%20recibir%20informaci%C3%B3n%20sobre%20ARQA-GRUPO%20INMOBILIARIO.">
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contacto -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section__head">
+        <h2 class="section__title" data-i18n="contact_title">Contacto</h2>
+        <p class="section__lead" data-i18n="contact_lead">
+          Complete el formulario y nos comunicaremos con usted.
+        </p>
+      </div>
+
+      <div class="grid grid--2">
+        <form class="form" id="contactForm">
+          <div class="form__row">
+            <label data-i18n="f_name">Nombre completo</label>
+            <input name="name" required />
+          </div>
+
+          <div class="form__row">
+            <label data-i18n="f_phone">Teléfono</label>
+            <input name="phone" required />
+          </div>
+
+          <div class="form__row">
+            <label data-i18n="f_email">Correo</label>
+            <input type="email" name="email" required />
+          </div>
+
+          <div class="form__row">
+            <label data-i18n="f_city">Ciudad de interés</label>
+            <select name="city" required>
+              <option value="Quito" data-i18n="city_quito">Quito</option>
+              <option value="Guayaquil" data-i18n="city_gye">Guayaquil</option>
+              <option value="Cuenca" data-i18n="city_cuenca">Cuenca</option>
+              <option value="Otra" data-i18n="city_other">Otra</option>
+            </select>
+          </div>
+
+          <div class="form__row">
+            <label data-i18n="f_interest">Tipo de interés</label>
+            <select name="interest" required>
+              <option value="Compra" data-i18n="i_buy">Compra de propiedad</option>
+              <option value="Inversion" data-i18n="i_invest">Inversión</option>
+              <option value="Asociacion" data-i18n="i_partner">Asociación estratégica</option>
+            </select>
+          </div>
+
+          <div class="form__row">
+            <label data-i18n="f_msg">Mensaje</label>
+            <textarea name="message" rows="5" required></textarea>
+          </div>
+
+          <button class="btn btn--primary" type="submit" data-i18n="f_submit">Enviar</button>
+          <p class="form__hint" id="formHint" aria-live="polite"></p>
+        </form>
+
+        <div class="contactbox">
+          <h3 data-i18n="contact_box_title">Canales directos</h3>
+          <p class="contactbox__p"><span data-i18n="contact_box_city">Ciudades:</span> Quito · Guayaquil · Cuenca</p>
+          <p class="contactbox__p"><span data-i18n="contact_box_email">Email:</span> <a href="mailto:contacto@arqagrupoinmobiliario.com.ec">contacto@arqagrupoinmobiliario.com.ec</a></p>
+          <p class="contactbox__p"><span data-i18n="contact_box_phone">Teléfono:</span> +593 00 000 0000</p>
+
+          <div class="contactbox__actions">
+            <a class="btn btn--secondary" target="_blank" rel="noopener"
+               href="https://wa.me/593000000000?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20ARQA-GRUPO%20INMOBILIARIO.">
+              WhatsApp
+            </a>
+          </div>
+
+          <p class="contactbox__note" data-i18n="contact_box_note">
+            *Actualice el número de WhatsApp y el teléfono en el código antes de publicar.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <div class="footer__brand">ARQA-GRUPO INMOBILIARIO</div>
+        <div class="footer__tag" data-i18n="tagline">Visión urbana y desarrollo estratégico</div>
+      </div>
+      <div class="footer__links">
+        <a href="#firma" data-i18n="nav_firma">Firma</a>
+        <a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a>
+        <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
+      </div>
+      <div class="footer__copy">© <span id="year"></span> ARQA-GRUPO INMOBILIARIO</div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
