@@ -1,340 +1,156 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ARQA | Grupo Inmobiliario</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARQA | Grupo Inmobiliario</title>
 
-  <style>
-    body{
-      margin:0;
-      font-family: Arial, sans-serif;
-      background:#ffffff;
-      color:#0F1F2E;
-    }
+<style>
 
-    /* HEADER */
-    header{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      padding:18px 20px;
-      background:#fff;
-      border-bottom:1px solid #eee;
-    }
-    header img{
-      height:70px; /* aquí controlas tamaño del logo */
-    }
+body{
+    margin:0;
+    font-family: 'Segoe UI', sans-serif;
+    background:#f7f8fa;
+    color:#222;
+}
 
-    /* HERO */
-    .hero{
-      position:relative;
-      height:70vh;
-      overflow:hidden;
-      display:flex;
-      align-items:center;
-      color:white;
-    }
-    .slide{
-      position:absolute;
-      inset:0;
-      background-size:cover;
-      background-position:center;
-      opacity:0;
-      transition:opacity 1s ease-in-out;
-    }
-    .slide.active{ opacity:1; }
+/* TITULO */
+h2{
+    text-align:center;
+    margin-top:60px;
+    font-size:32px;
+}
 
-    .overlay{
-      position:absolute;
-      inset:0;
-      background:rgba(0,0,0,0.45);
-    }
-    .hero-content{
-      position:relative;
-      z-index:2;
-      max-width:900px;
-      padding:0 8%;
-    }
-    .hero-content h1{
-      margin:0 0 12px 0;
-      font-size:42px;
-      line-height:1.1;
-    }
-    .hero-content p{
-      margin:0 0 18px 0;
-      max-width:650px;
-      font-size:16px;
-      opacity:0.95;
-    }
-    .btn{
-      display:inline-block;
-      padding:12px 18px;
-      border-radius:28px;
-      background:#ffffff;
-      color:#0F1F2E;
-      text-decoration:none;
-      font-weight:700;
-    }
+/* BOTONES PRINCIPALES */
+.filtros{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin:40px 0;
+    flex-wrap:wrap;
+}
 
-    /* SECCIÓN PROYECTOS */
-    #proyectos{
-      padding:70px 8%;
-      background:#fafafa;
-    }
-    #proyectos h2{
-      text-align:center;
-      margin:0 0 18px 0;
-      font-size:28px;
-    }
+.filtros button{
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    cursor:pointer;
+    font-weight:600;
+    background:#e4e6eb;
+    transition:0.3s;
+}
 
-    .filtros{
-      display:flex;
-      gap:10px;
-      justify-content:center;
-      flex-wrap:wrap;
-      margin:0 0 28px 0;
-    }
-    .filtros button{
-      border:1px solid #dcdcdc;
-      background:#fff;
-      color:#0F1F2E;
-      padding:10px 16px;
-      border-radius:24px;
-      cursor:pointer;
-      font-weight:600;
-    }
-    .filtros button.active{
-      background:#0F1F2E;
-      color:#fff;
-      border-color:#0F1F2E;
-    }
+.filtros button.active{
+    background:#0f1f2e;
+    color:white;
+}
 
-    .grid{
-      display:grid;
-      grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
-      gap:18px;
-      max-width:1200px;
-      margin:0 auto;
-    }
+/* GRID PROYECTOS */
+.grid{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-bottom:80px;
+}
 
-    .proyecto{
-      background:#fff;
-      border-radius:14px;
-      overflow:hidden;
-      box-shadow:0 10px 26px rgba(0,0,0,0.08);
-      display:none; /* el JS decide qué mostrar */
-    }
+/* TARJETA PROYECTO */
+.proyecto{
+    background:white;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 10px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
 
-    .proyecto img{
-      width:100%;
-      height:170px;
-      object-fit:cover;
-      display:block;
-    }
+.proyecto:hover{
+    transform:translateY(-5px);
+}
 
-    .contenido{
-      padding:14px 14px 16px;
-    }
-    .contenido h3{
-      margin:0 0 8px 0;
-      font-size:16px;
-    }
-    .ubicacion{
-      font-size:12px;
-      color:#666;
-      margin-bottom:8px;
-    }
-    .descripcion{
-      font-size:13px;
-      color:#444;
-      line-height:1.35;
-    }
+.proyecto img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+}
 
-    /* CONTACTO */
-    .contacto{
-      padding:70px 8%;
-      text-align:center;
-      background:#f5f5f5;
-    }
-    .contacto h2{
-      margin:0 0 10px 0;
-      font-size:26px;
-    }
-    .contacto p{
-      margin:0 0 22px 0;
-      color:#555;
-    }
-    .contact-buttons{
-      display:flex;
-      gap:12px;
-      justify-content:center;
-      flex-wrap:wrap;
-    }
-    .btn-contacto{
-      display:inline-block;
-      padding:12px 20px;
-      border-radius:26px;
-      text-decoration:none;
-      font-weight:700;
-      background:#0F1F2E;
-      color:#fff;
-    }
-    .btn-contacto:hover{
-      filter:brightness(1.1);
-    }
-    .btn-contacto.whatsapp{
-      background:#25D366;
-      color:#fff;
-    }
+.contenido{
+    padding:20px;
+}
 
-    footer{
-      text-align:center;
-      padding:16px;
-      font-size:12px;
-      color:#777;
-      background:#fff;
-      border-top:1px solid #eee;
-    }
-  </style>
+.contenido h3{
+    margin:0 0 10px 0;
+}
+
+.contenido p{
+    margin:6px 0;
+    font-size:14px;
+    color:#555;
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="logo.png" alt="ARQA Grupo Inmobiliario">
-  </header>
+<h2>Nuestros Proyectos</h2>
 
-  <!-- HERO SLIDER -->
-    <section style="height:60vh; background:url('quito.jpg') center/cover no-repeat; display:flex; align-items:center; padding:0 8%; color:white;">
-  <div style="background:rgba(0,0,0,0.45); padding:30px; border-radius:12px;">
-    <h1 style="margin:0 0 10px 0; font-size:36px;">
-      Proyectos bien pensados.<br>Bien construidos.
-    </h1>
-    <p style="margin:0 0 15px 0;">
-      Desarrollo inmobiliario residencial, industrial, comercial e intervenciones patrimoniales.
-    </p>
-    <a href="#proyectos" style="background:white; color:#0F1F2E; padding:10px 18px; border-radius:25px; text-decoration:none; font-weight:bold;">
-      Ver proyectos
-    </a>
-  </div>
-</section>
- <section id="proyectos">
+<div class="filtros">
+    <button class="active" data-filter="residencial">Proyectos Residenciales</button>
+    <button data-filter="industrial">Proyectos Industriales</button>
+    <button data-filter="comercial">Proyectos Comerciales</button>
+    <button data-filter="patrimonial">Proyectos Patrimoniales</button>
+</div>
 
-    
+<div class="grid">
 
-  <!-- PROYECTOS -->
-  <section id="proyectos">
-    <h2>Nuestros Proyectos</h2>
-
-    <div class="filtros">
-      <div class="filtros">
-  <button class="active" data-filter="all">Todos los Proyectos</button>
-  <button data-filter="residencial">Proyectos Residenciales</button>
-  <button data-filter="industrial">Proyectos Industriales</button>
-  <button data-filter="comercial">Proyectos Comerciales</button>
-  <button data-filter="patrimonial">Proyectos Patrimoniales</button>
+    <!-- PROYECTO RESIDENCIAL VILLA VEGA -->
+    <div class="proyecto residencial">
+        <img src="residencial1.jpg" alt="Residencial Villa Vega">
+        <div class="contenido">
+            <h3>Proyecto Residencial Villa Vega</h3>
+            <p>22 casas pareadas de 160 m²</p>
+            <p>Tumbaco, Quito - Ecuador</p>
+        </div>
     </div>
 
-    <div class="grid">
+</div>
 
-      <!-- RESIDENCIAL -->
-      <div class="Proyecto Residencial">
-        <img src="residencial1.jpg" alt="Proyecto residencial">
-        <div class="contenido">
-         <h3></h3>
-          <div class=</div>
-          <div class=</div>
-        </div> 
- 
+<script>
 
-      <!-- INDUSTRIAL -->
-      <div class="proyecto industrial">
-        <img src="industrial1.jpg" alt="Proyecto industrial">
-        <div class="contenido">
-          <h3>Nave Industrial Norte</h3>
-          <div class="ubicacion">📍 Quito, Ecuador</div>
-          <div class="descripcion">Desarrollo industrial con estructura metálica y logística optimizada.</div>
-        </div>
-      </div>
+/* FILTRO SIMPLE */
 
-      <!-- COMERCIAL -->
-      <div class="proyecto comercial">
-        <img src="comercial1.jpg" alt="Proyecto comercial">
-        <div class="contenido">
-          <h3>Centro Comercial Urbano</h3>
-          <div class="ubicacion">📍 Guayaquil, Ecuador</div>
-          <div class="descripcion">Proyecto comercial moderno con locales estratégicos y alto flujo peatonal.</div>
-        </div>
-      </div>
+const botones = document.querySelectorAll(".filtros button");
+const proyectos = document.querySelectorAll(".proyecto");
 
-      <!-- PATRIMONIAL -->
-      <div class="proyecto patrimonial">
-        <img src="patrimonial1.jpg" alt="Proyecto patrimonial">
-        <div class="contenido">
-          <h3>Rehabilitación Centro Histórico</h3>
-          <div class="ubicacion">📍 Quito, Ecuador</div>
-          <div class="descripcion">Intervención patrimonial respetando materiales, historia y normativa.</div>
-        </div>
-      </div>
+botones.forEach(boton => {
+    boton.addEventListener("click", () => {
 
-    </div>
-  </section>
+        botones.forEach(b => b.classList.remove("active"));
+        boton.classList.add("active");
 
-  <!-- CONTACTO -->
-  <section id="contacto" class="contacto">
-    <h2>Contáctanos</h2>
-    <p>Escríbenos y te respondemos a la brevedad.</p>
+        const filtro = boton.getAttribute("data-filter");
 
-    <div class="contact-buttons">
-      <a class="btn-contacto" href="mailto:mauricio.leser@gmail.com">Enviar correo</a>
-      <a class="btn-contacto whatsapp" href="https://wa.me/593997241108" target="_blank">WhatsApp</a>
-    </div>
-  </section>
+        proyectos.forEach(p => {
+            if(p.classList.contains(filtro)){
+                p.style.display = "block";
+            }else{
+                p.style.display = "none";
+            }
+        });
 
-  <footer>
-    © ARQA Grupo Inmobiliario — Todos los derechos reservados
-  </footer>
-
-  <script>
-    // SLIDER AUTOMÁTICO
-    const slides = document.querySelectorAll(".slide");
-    let index = 0;
-
-    setInterval(() => {
-      slides[index].classList.remove("active");
-      index = (index + 1) % slides.length;
-      slides[index].classList.add("active");
-    }, 5000);
-
-    // FILTRO PROYECTOS
-    const botones = document.querySelectorAll(".filtros button");
-    const proyectos = document.querySelectorAll(".proyecto");
-
-    function mostrar(filtro){
-      proyectos.forEach(p => {
-        if(filtro === "all" || p.classList.contains(filtro)){
-          p.style.display = "block";
-        } else {
-          p.style.display = "none";
-        }
-      });
-    }
-
-    // por defecto: mostrar todos
-    mostrar("all");
-
-    botones.forEach(btn => {
-      btn.addEventListener("click", () => {
-        document.querySelector(".filtros button.active").classList.remove("active");
-        btn.classList.add("active");
-        mostrar(btn.getAttribute("data-filter"));
-      });
     });
-  </script>
+});
+
+/* Por defecto mostrar residenciales */
+proyectos.forEach(p => {
+    if(!p.classList.contains("residencial")){
+        p.style.display="none";
+    }
+});
+
+</script>
 
 </body>
 </html>
-    
-     
