@@ -1,4 +1,3 @@
-index.html
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -7,241 +6,127 @@ index.html
 <title>ARQA | Grupo Inmobiliario</title>
 
 <style>
-  .ubicacion {
-    font-size: 13px;
-    color: #777;
-    margin: 5px 15px;
-}
-body {
+
+body{
+    margin:0;
     font-family: 'Segoe UI', sans-serif;
-    background: #f7f8fa;
+    background:#f7f8fa;
 }
 
 /* HEADER */
 header{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:20px 8%;
-  background:white;
-  box-shadow:0 2px 10px rgba(0,0,0,0.05);
+    background:white;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
-.logo{
-  font-weight:bold;
-  font-size:22px;
-  letter-spacing:3px;
-}
-.logo img{
-   height:90px;
-}
-.logo span{
-  display:block;
-  font-size:11px;
-  letter-spacing:2px;
-  color:#8A8F98;
+header img{
+    height:60px;
 }
 
-/* HERO SLIDER */
-.hero{
-  position:relative;
-  height:90vh;
-  width:100%;
-  display:flex;
-  align-items:center;
-  color:white;
-  overflow:hidden;
+/* SECCION PROYECTOS */
+
+#proyectos{
+    padding:60px 8%;
+    text-align:center;
 }
 
-.slide{
-  position:absolute;
-  width:100%;
-  height:100%;
-  background-size:cover;
-  background-position:center;
-  opacity:0;
-  transition:opacity 1s ease-in-out;
-}
-
-.slide.active{
-  opacity:1;
-}
-
-.overlay{
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:rgba(15,31,46,0.65);
-}
-
-.hero-content{
-  position:relative;
-  z-index:2;
-  margin-left:8%;
-  max-width:700px;
-}
-
-.hero h1{
-  font-size:48px;
-}
-
-.hero p{
-  font-size:18px;
-  line-height:1.6;
-}
-
-.btn{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 25px;
-  background:white;
-  color:#0F1F2E;
-  text-decoration:none;
-  border-radius:30px;
-  font-weight:bold;
-}
-
-/* PROYECTOS */
-section{
-  padding:80px 8%;
-}
-
-h2{
-  text-align:center;
+#proyectos h2{
+    margin-bottom:30px;
+    color:#0F1F2E;
 }
 
 .filtros{
-  text-align:center;
-  margin:30px 0;
+    margin-bottom:40px;
 }
 
-.filtros button {
-    padding: 8px 18px;
-    border-radius: 30px;
-    border: 1px solid #ddd;
-    background: white;
-    cursor: pointer;
-    transition: 0.3s;
+.filtros button{
+    padding:8px 18px;
+    border-radius:30px;
+    border:1px solid #ddd;
+    background:white;
+    cursor:pointer;
+    transition:0.3s;
+    margin:5px;
 }
 
-.filtros button:hover {
-    background: #0F1F2E;
-    color: white;
+.filtros button:hover,
+.filtros button.active{
+    background:#0F1F2E;
+    color:white;
 }
 
-.filtros button.active {
-    background: #0F1F2E;
-    color: white;
-}
+/* GRID */
 
 .grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+    gap:30px;
 }
 
-.proyecto {
-    background: white;
-    border-radius: 16px;
-    overflow: hidden;
-    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    padding-bottom: 15px;
+.proyecto{
+    background:white;
+    border-radius:16px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,0.08);
+    transition:0.3s;
+    text-decoration:none;
+    color:inherit;
 }
 
-.proyecto:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+.proyecto:hover{
+    transform:translateY(-6px);
+    box-shadow:0 15px 35px rgba(0,0,0,0.15);
 }
 
-.proyecto img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+.proyecto img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
-.proyecto:hover img {
-    transform: scale(1.05);
-}
-.proyecto h3 {
-    font-size: 18px;
-    margin: 15px 15px 5px 15px;
-    color: #0F1F2E;
+.proyecto h3{
+    padding:15px;
+    font-size:18px;
 }
 
-.proyecto p {
-    margin: 5px 15px;
-    font-size: 14px;
-    color: #555;
-}
-  /* CONTACTO */
-.contacto{
-  padding:80px 8%;
-  text-align:center;
-  background:#f5f5f5;
-}
+/* CONTACTO */
 
-.contact-buttons{
-  margin-top:30px;
+#contacto{
+    padding:60px 8%;
+    text-align:center;
+    background:#ffffff;
 }
 
 .btn-contacto{
-  display:inline-block;
-  margin:10px;
-  padding:15px 30px;
-  background:#0F1F2E;
-  color:white;
-  text-decoration:none;
-  border-radius:30px;
-  transition:0.3s;
-  font-weight:600;
+    display:inline-block;
+    margin:10px;
+    padding:12px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
 }
 
-.btn-contacto:hover{
-  background:#1f3b57;
+.btn-correo{
+    background:#0F1F2E;
+    color:white;
 }
 
-.btn-contacto.whatsapp{
-  background:#25D366;
+.btn-whatsapp{
+    background:#25D366;
+    color:white;
 }
 
-.btn-contacto.whatsapp:hover{
-  background:#1ebe5d;
-}
-
-</style>
 </style>
 </head>
 
 <body>
 
 <header>
-<div class="logo">
-    <img src="logo.png" alt="ARQA Grupo Inmobiliario">
-</div>
+<img src="logo.png">
 </header>
 
-<!-- HERO SLIDER -->
-<div class="hero">
-
-    <div class="slide active" style="background-image:url('quito.jpg');"></div>
-    <div class="slide" style="background-image:url('guayaquil.jpg');"></div>
-    <div class="slide" style="background-image:url('cuenca.jpg');"></div>
-
-    <div class="overlay"></div>
-
-    <div class="hero-content">
-        <h1>Proyectos bien pensados.<br>Bien construidos.</h1>
-        <p>
-            Desarrollamos proyectos residenciales, industriales, comerciales y rehabilitación patrimonial con visión técnica y financiera.
-        </p>
-        <a href="#proyectos" class="btn">Ver proyectos</a>
-    </div>
-
-</div>
-
-<!-- PROYECTOS -->
 <section id="proyectos">
 <h2>Nuestros Proyectos</h2>
 
@@ -255,89 +140,71 @@ h2{
 
 <div class="grid">
 
-<div class="proyecto residencial">
+<a href="residencial.html" class="proyecto residencial">
+<img src="residencial1.jpg">
+<h3>Proyectos Residenciales</h3>
+</a>
 
-    <img src="residencial1.jpg">
-    <img src="residencial2.jpg">
-
-    <h3>Conjunto Residencial Villa Vega</h3>
-
-    <p class="ubicacion">
-        📍 Tumbaco – Quito, Ecuador
-    </p>
-
-    <p>
-        Proyecto residencial de 22 casas pareadas de 160 m².
-    </p>
-
-</div>
-
-
-<div class="proyecto industrial">
+<a href="#" class="proyecto industrial">
 <img src="industrial1.jpg">
 <h3>Proyectos Industriales</h3>
-<p>&nbsp;</p>
-</div>
+</a>
 
-<div class="proyecto comercial">
+<a href="#" class="proyecto comercial">
 <img src="comercial1.jpg">
 <h3>Proyectos Comerciales</h3>
-<p>&nbsp;</p>
-</div>
-  
-<div class="proyecto patrimonial">
+</a>
+
+<a href="#" class="proyecto patrimonial">
 <img src="patrimonial1.jpg">
-<h3>Rehabilitación Patrimonial</h3>
-<p>&nbsp;</p>
+<h3>Proyectos Patrimoniales</h3>
+</a>
+
 </div>
+</section>
+
+<section id="contacto">
+<h2>Contáctanos</h2>
+<p>Escríbenos y te responderemos a la brevedad.</p>
+
+<a href="mailto:mauricio.leser@gmail.com" class="btn-contacto btn-correo">
+Enviar correo
+</a>
+
+<a href="https://wa.me/593997241108" target="_blank" class="btn-contacto btn-whatsapp">
+WhatsApp
+</a>
+
 </section>
 
 <script>
 
-/* SLIDER AUTOMÁTICO */
-let slides = document.querySelectorAll(".slide");
-let index = 0;
-
-setInterval(()=>{
-  slides[index].classList.remove("active");
-  index = (index+1)%slides.length;
-  slides[index].classList.add("active");
-},5000);
-
 const botones = document.querySelectorAll(".filtros button");
-const proyectos = document.querySelectorAll(".grid .proyecto");
+const proyectos = document.querySelectorAll(".proyecto");
 
 botones.forEach(btn=>{
-  btn.addEventListener("click", ()=>{
+    btn.addEventListener("click", ()=>{
+        document.querySelector(".filtros button.active").classList.remove("active");
+        btn.classList.add("active");
 
-    document.querySelector(".filtros button.active").classList.remove("active");
-    btn.classList.add("active");
+        let filtro = btn.getAttribute("data-filter");
 
-    let filtro = btn.getAttribute("data-filter");
-
-    proyectos.forEach(p=>{
-      if(filtro === "all"){
-        p.style.display = "block";
-      } else if(p.classList.contains(filtro)){
-        p.style.display = "block";
-      } else {
-        p.style.display = "none";
-      }
+        proyectos.forEach(p=>{
+            if(filtro === "all"){
+                p.style.display="block";
+            }else if(p.classList.contains(filtro)){
+                p.style.display="block";
+            }else{
+                p.style.display="none";
+            }
+        });
     });
-
-  });
 });
-</script>
-  <!-- CONTACTO -->
-<section id="contacto" class="contacto">
-  <h2>Contáctanos</h2>
-  <p>Escríbenos y te respondemos a la brevedad.</p>
 
-  <div class="contact-buttons">
-    <a href="mailto:mauricio.leser@gmail.com" class="btn-contacto">Enviar correo</a>
-    <a href="https://wa.me/593997241108" target="_blank" class="btn-contacto whatsapp">WhatsApp</a>
-  </div>
-</section>
+</script>
+
 </body>
 </html>
+    
+
 
