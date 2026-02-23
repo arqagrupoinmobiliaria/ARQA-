@@ -66,8 +66,8 @@ img{max-width:100%; display:block}
   height:72px;
 }
 
-.brand{display:flex; gap:12px; align-items:center}
-.brand__logo{width:85px; height:auto;}
+.brand{display:flex; align-items:center}
+.brand__logo{width:140px; transform:scale(1.2);}
 .brand__meta{display:flex; flex-direction:column; line-height:1.1}
 .brand__name{font-weight:700; letter-spacing:.4px; font-size:13px}
 .brand__tagline{font-size:12px; opacity:.86}
