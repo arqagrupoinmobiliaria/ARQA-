@@ -40,6 +40,7 @@ navLinks?.addEventListener("click", (e) => {
 // =============================
 // Hero slider
 // =============================
+/*
 const slidesEl = document.getElementById("heroSlides");
 const dotsEl = document.getElementById("heroDots");
 
@@ -98,6 +99,7 @@ function stopAuto(){
 
 renderSlides();
 startAuto();
+*/
 
 // =============================
 // i18n (ES/EN) - practical bilingual
