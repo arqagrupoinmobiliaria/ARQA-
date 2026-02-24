@@ -144,7 +144,7 @@ img{max-width:100%; display:block}
 .hero__slides{
   position:absolute;
   inset:0;
-  overflow:hidden;
+  z-index:1;
 }
 .hero__slide{
   position:absolute;
@@ -167,11 +167,11 @@ img{max-width:100%; display:block}
 }
 .hero__overlay{
   position:absolute; inset:0;
-  background: linear-gradient(120deg, rgba(11,28,45,.78), rgba(11,28,45,.45));
+  z-index:2;
 }
 .hero__content{
   position:relative;
-  padding-top:92px; /* avoid header overlap */
+ z-index:3;
 }
 .hero__title{margin:0 0 10px; font-size:44px; max-width:18ch; letter-spacing:.2px}
 .hero__subtitle{margin:0 0 20px; opacity:.92}
