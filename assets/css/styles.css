@@ -137,9 +137,8 @@ img{max-width:100%; display:block}
 .hero{
   position:relative;
   min-height:92vh;
-  display:flex;
-  align-items:center;
   color:#fff;
+  overflow:hidden;
 }
 .hero__slides{
   position:absolute;
