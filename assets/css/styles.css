@@ -133,49 +133,54 @@ img{max-width:100%; display:block}
   .lang{margin-left:0}
 }
 
+/* =========================
+   HERO SLIDER
+========================= */
+
 .hero{
-  position:relative;
-  height:100vh;
-  display:flex;
-  align-items:center;
-  color:#fff;
-  overflow:hidden;
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  overflow: hidden;
 }
 
 .hero__slides{
-  position:absolute;
-  inset:0;
-  overflow:hidden;
-  z-index:1;
-}
-.hero__overlay{
-  position:absolute;
-  inset:0;
-  background: rgba(0,0,0,0.4);
-  z-index:2;
-}
-.hero__content{
-  position:relative;
-  z-index:3;
-  text-align:center;
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
 }
 
 .hero__slide{
-  position:absolute;
-  inset:0;
-  opacity:0;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
   transition: opacity 1s ease;
 }
 
 .hero__slide.is-active{
-  opacity:1;
+  opacity: 1;
 }
 
 .hero__slide img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  display:block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.hero__overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.4);
+  z-index: 2;
+}
+
+.hero__content{
+  position: relative;
+  z-index: 3;
+  text-align: center;
 }
 
 }
