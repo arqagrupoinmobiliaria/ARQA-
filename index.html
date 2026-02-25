@@ -24,18 +24,17 @@ let current = 0;
 </section>
 
 <script>
-const slides = document.querySelectorAll('.hero__slide');
-let current = 0;
+document.addEventListener("DOMContentLoaded", function() {
+  const slides = document.querySelectorAll(".hero__slide");
+  let current = 0;
 
-setInterval(() => {
-  slides[current].classList.remove('is-active');
-  current = (current + 1) % slides.length;
-  slides[current].classList.add('is-active');
-}, 4000);
+  setInterval(function() {
+    slides[current].classList.remove("is-active");
+    current = (current + 1) % slides.length;
+    slides[current].classList.add("is-active");
+  }, 4000);
+});
 </script>
-
-</body>
-</html>
   
 <body>
   <!-- WhatsApp Floating Button -->
