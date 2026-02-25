@@ -16,7 +16,16 @@
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
+<script>
+const slides = document.querySelectorAll('.hero__slide');
+let current = 0;
 
+setInterval(() => {
+  slides[current].classList.remove('is-active');
+  current = (current + 1) % slides.length;
+  slides[current].classList.add('is-active');
+}, 4000);
+</script>
 <body>
   <!-- WhatsApp Floating Button -->
   <a class="wa-float" id="waFloat" target="_blank" rel="noopener"
