@@ -87,7 +87,7 @@
 
   // WhatsApp floating button
   // IMPORTANTE: cambia el número por tu WhatsApp en formato internacional sin "+"
-  const WHATSAPP_NUMBER = "593XXXXXXXXX"; // <-- cambia esto
+  const WHATSAPP_NUMBER = "593999852110"; // <-- cambia esto
   const waBtn = document.getElementById("waFloat");
 
   // i18n dictionary
