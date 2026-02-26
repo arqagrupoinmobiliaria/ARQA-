@@ -16,27 +16,8 @@
   <link rel="icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
-<script>
-const slides = document.querySelectorAll('.hero__slide');
-let current = 0;
-
-...
-</section>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  const slides = document.querySelectorAll(".hero__slide");
-  let current = 0;
-
-  setInterval(function() {
-    slides[current].classList.remove("is-active");
-    current = (current + 1) % slides.length;
-    slides[current].classList.add("is-active");
-  }, 4000);
-});
-</script>
+  <body>
   
-<body>
   <!-- WhatsApp Floating Button -->
   <a class="wa-float" id="waFloat" target="_blank" rel="noopener"
      href="https://wa.me/593999852110?text=Hola%2C%20estoy%20interesado%20en%20conocer%20los%20proyectos%20y%20oportunidades%20de%20ARQA-GRUPO%20INMOBILIARIO.">
@@ -342,5 +323,24 @@ document.addEventListener("DOMContentLoaded", function() {
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const slides = document.querySelectorAll(".hero_slide");
+    let current = 0;
+
+    if (slides.length > 0) {
+        slides[current].classList.add("is-active");
+
+        setInterval(function() {
+            slides[current].classList.remove("is-active");
+            current = (current + 1) % slides.length;
+            slides[current].classList.add("is-active");
+        }, 4000);
+    }
+});
+</script>
+
 </body>
 </html>
+
