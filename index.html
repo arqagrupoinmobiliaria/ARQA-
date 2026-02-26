@@ -3,336 +3,312 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#0B1C2D" />
   <title>ARQA-GRUPO INMOBILIARIO | Visión urbana y desarrollo estratégico</title>
   <meta name="description" content="ARQA-GRUPO INMOBILIARIO: desarrollo inmobiliario estratégico en Quito, Guayaquil y Cuenca. Proyectos residenciales, comerciales, industriales y patrimoniales." />
-  <meta name="theme-color" content="#0B1C2D" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="ARQA-GRUPO INMOBILIARIO" />
-  <meta property="og:description" content="Visión urbana y desarrollo estratégico. Quito · Guayaquil · Cuenca" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/img/og-cover.jpg" />
-
-  <link rel="icon" href="assets/favicon.ico" />
+  <link rel="preload" href="assets/css/styles.css" as="style">
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="icon" href="assets/img/logo-arqa.svg" type="image/svg+xml">
 </head>
-  <body>
-  
-  <!-- WhatsApp Floating Button -->
-  <a class="wa-float" id="waFloat" target="_blank" rel="noopener"
-     href="https://wa.me/593999852110?text=Hola%2C%20estoy%20interesado%20en%20conocer%20los%20proyectos%20y%20oportunidades%20de%20ARQA-GRUPO%20INMOBILIARIO.">
-    <span class="wa-dot"></span>
-    <span class="wa-text">WhatsApp</span>
-  </a>
 
-  <!-- Header -->
-  <header class="header header--transparent" id="siteHeader">
-    <div class="container header__inner">
-     <a class="brand" href="#top">
-  <img src="assets/img/logo.png" alt="ARQA-GRUPO INMOBILIARIO" class="brand__logo" />
-</a>
+<body>
+  <!-- HEADER -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="ARQA Grupo Inmobiliario">
+        <img class="brand-logo" src="assets/img/logo-arqa.svg" alt="ARQA" />
+        <div class="brand-text">
+          <div class="brand-name">ARQA-GRUPO INMOBILIARIO</div>
+          <div class="brand-tagline" data-i18n="tagline">Visión urbana y desarrollo estratégico</div>
+        </div>
+      </a>
 
       <nav class="nav" aria-label="Principal">
-        <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-        <div class="nav__links" id="navLinks">
-          <a href="#firma" data-i18n="nav_firma">Firma</a>
-          <a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a>
-          <a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a>
-          <a href="#alianzas" data-i18n="nav_alianzas">Alianzas</a>
-          <a href="#contacto" class="nav__cta" data-i18n="nav_contacto">Contacto</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
 
-          <div class="lang">
-            <button class="lang__btn" id="langES" type="button" aria-pressed="true">ES</button>
-            <button class="lang__btn" id="langEN" type="button" aria-pressed="false">EN</button>
-          </div>
-        </div>
+        <ul class="nav-list" id="navList">
+          <li><a href="#firma" data-i18n="nav_firma">Firma</a></li>
+          <li><a href="#lineas" data-i18n="nav_proyectos">Proyectos</a></li>
+          <li><a href="#experiencia" data-i18n="nav_experiencia">Experiencia</a></li>
+          <li><a href="#alianzas" data-i18n="nav_invertir">Invertir</a></li>
+          <li><a href="#contacto" data-i18n="nav_contacto">Contacto</a></li>
+        </ul>
       </nav>
+
+      <div class="lang-switch" role="group" aria-label="Idioma">
+        <button class="lang-btn" data-lang="es" id="btnEs" aria-pressed="true">ES</button>
+        <button class="lang-btn" data-lang="en" id="btnEn" aria-pressed="false">EN</button>
+      </div>
     </div>
   </header>
 
-  <!-- Top anchor -->
-  <div id="top"></div>
-
-  <!-- Hero Slider -->
-  <section class="hero" aria-label="Slider principal">
-  <div id="heroSlides"></div>
-<div id="heroDots"></div>
-   <div class="hero__overlay">
-    <div class="container hero__content">
-        <h1 class="hero__title" data-i18n="hero_title">
-            Desarrollo inmobiliario estratégico
-        </h1>
-
-        <p class="hero__tagline">
-            Visión urbana y desarrollo estratégico
-        </p>
-
-        <p class="hero__subtitle">
-            Quito · Guayaquil · Cuenca
-        </p>
-
-        <div class="hero__actions">
-            <a class="btn btn--primary" href="#proyectos">Ver Proyectos</a>
-            <a class="btn btn--secondary" href="#alianzas">Invertir</a>
-            <a class="btn btn--ghost" href="#contacto">Contacto</a>
-        </div>
-    </div>
-</div>
-  </section>
-
-  <!-- Firma -->
-  <section class="section" id="firma">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="section__title" data-i18n="firma_title">Firma</h2>
-        <p class="section__lead" data-i18n="firma_lead">
-          Somos una firma desarrolladora enfocada en planificación y ejecución de proyectos inmobiliarios estratégicos en Ecuador.
-        </p>
+  <!-- HERO / SLIDER -->
+  <main id="top">
+    <section class="hero" aria-label="ARQA Hero">
+      <div class="hero-slider" id="heroSlider">
+        <div class="slide is-active" style="background-image:url('assets/img/hero-quito.jpg');" aria-label="Quito"></div>
+        <div class="slide" style="background-image:url('assets/img/hero-guayaquil.jpg');" aria-label="Guayaquil"></div>
+        <div class="slide" style="background-image:url('assets/img/hero-cuenca.jpg');" aria-label="Cuenca"></div>
       </div>
 
-      <div class="grid grid--2">
-        <div class="card">
-          <h3 class="card__title">Marcela Mata</h3>
-          <p class="card__subtitle" data-i18n="firma_marcela_role">Arquitecta – Dirección Arquitectónica</p>
-          <p class="card__text" data-i18n="firma_marcela_text">
-            Lidera el diseño y la planificación técnica de los proyectos, asegurando coherencia urbana, eficiencia espacial y alto estándar arquitectónico.
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <h1 data-i18n="hero_title">Desarrollo inmobiliario estratégico en Ecuador</h1>
+        <p class="hero-sub" data-i18n="hero_subtitle">Quito · Guayaquil · Cuenca</p>
+
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="#lineas" data-i18n="cta_ver_proyectos">Ver Proyectos</a>
+          <a class="btn btn-accent" href="#alianzas" data-i18n="cta_invertir">Invertir</a>
+          <a class="btn btn-ghost" href="#contacto" data-i18n="cta_contacto">Contacto</a>
+        </div>
+
+        <div class="hero-dots" id="heroDots" aria-label="Selector de slides"></div>
+      </div>
+    </section>
+
+    <!-- FIRMA -->
+    <section class="section" id="firma">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="firma_title">Firma</h2>
+          <p data-i18n="firma_text">
+            Somos una firma desarrolladora enfocada en la planificación y ejecución de proyectos inmobiliarios estratégicos en las principales ciudades del Ecuador.
           </p>
         </div>
 
-        <div class="card">
-          <h3 class="card__title">Mauricio Leser</h3>
-          <p class="card__subtitle" data-i18n="firma_mauricio_role">Desarrollador Inmobiliario</p>
-          <p class="card__text" data-i18n="firma_mauricio_text">
-            Especializado en estructuración de proyectos, análisis estratégico de suelo y desarrollo integral de activos inmobiliarios con visión de largo plazo.
-          </p>
+        <div class="cards two">
+          <article class="card">
+            <div class="card-title">
+              <h3>Marcela Mata</h3>
+              <span class="role" data-i18n="role_arq">Arquitecta</span>
+            </div>
+            <p data-i18n="marcela_text">
+              Dirección arquitectónica y planificación técnica para asegurar coherencia urbana, eficiencia espacial y alto estándar de diseño.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-title">
+              <h3>Mauricio Leser</h3>
+              <span class="role" data-i18n="role_dev">Desarrollador Inmobiliario</span>
+            </div>
+            <p data-i18n="mauricio_text">
+              Estructuración y viabilidad de proyectos, análisis estratégico de suelo y desarrollo integral de activos inmobiliarios con visión empresarial.
+            </p>
+          </article>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Proyectos / Líneas -->
-  <section class="section section--alt" id="proyectos">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="section__title" data-i18n="lines_title">Líneas de Desarrollo</h2>
-        <p class="section__lead" data-i18n="lines_lead">
-          Cuatro verticales claras para atender oportunidades inmobiliarias con criterio técnico y visión estratégica.
-        </p>
-      </div>
-
-      <div class="grid grid--4">
-        <article class="tile">
-          <img src="assets/img/cat-residencial.jpg" alt="Proyectos residenciales" class="tile__img" />
-          <div class="tile__body">
-            <h3 class="tile__title" data-i18n="line_res_title">Proyectos Residenciales</h3>
-            <p class="tile__text" data-i18n="line_res_text">Vivienda con enfoque en funcionalidad, ubicación y valorización sostenible.</p>
-            <a class="tile__link" href="#contacto" data-i18n="line_cta">Solicitar información</a>
-          </div>
-        </article>
-
-        <article class="tile">
-          <img src="assets/img/cat-comercial.jpg" alt="Proyectos comerciales" class="tile__img" />
-          <div class="tile__body">
-            <h3 class="tile__title" data-i18n="line_com_title">Proyectos Comerciales</h3>
-            <p class="tile__text" data-i18n="line_com_text">Espacios comerciales estratégicos diseñados para dinamizar zonas y consolidar presencia empresarial.</p>
-            <a class="tile__link" href="#contacto" data-i18n="line_cta">Solicitar información</a>
-          </div>
-        </article>
-
-        <article class="tile">
-          <img src="assets/img/cat-industrial.jpg" alt="Proyectos industriales" class="tile__img" />
-          <div class="tile__body">
-            <h3 class="tile__title" data-i18n="line_ind_title">Proyectos Industriales</h3>
-            <p class="tile__text" data-i18n="line_ind_text">Infraestructura logística e industrial enfocada en eficiencia operativa y expansión.</p>
-            <a class="tile__link" href="#contacto" data-i18n="line_cta">Solicitar información</a>
-          </div>
-        </article>
-
-        <article class="tile">
-          <img src="assets/img/cat-patrimonial.jpg" alt="Proyectos patrimoniales" class="tile__img" />
-          <div class="tile__body">
-            <h3 class="tile__title" data-i18n="line_pat_title">Proyectos Patrimoniales</h3>
-            <p class="tile__text" data-i18n="line_pat_text">Puesta en valor de activos históricos con criterio técnico y coherencia urbana.</p>
-            <a class="tile__link" href="#contacto" data-i18n="line_cta">Solicitar información</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- Experiencia Técnica -->
-  <section class="section" id="experiencia">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="section__title" data-i18n="exp_title">Experiencia Técnica</h2>
-        <p class="section__lead" data-i18n="exp_lead">
-          Sección práctica para subir proyectos de diseño y construcción progresivamente.
-        </p>
-      </div>
-
-      <div class="grid grid--2">
-        <div class="panel">
-          <div class="panel__top">
-            <h3 class="panel__title" data-i18n="exp_design_title">Diseño Arquitectónico</h3>
-            <p class="panel__text" data-i18n="exp_design_text">Proyectos de diseño y colaboración con otros arquitectos.</p>
-          </div>
-          <div class="panel__media">
-            <img src="assets/img/exp-diseno-1.jpg" alt="Ejemplo de proyecto de diseño" />
-          </div>
+    <!-- LÍNEAS DE DESARROLLO -->
+    <section class="section alt" id="lineas">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="lineas_title">Líneas de Desarrollo</h2>
+          <p data-i18n="lineas_text">Cuatro verticales de desarrollo con enfoque técnico y planificación estructurada.</p>
         </div>
 
-        <div class="panel">
-          <div class="panel__top">
-            <h3 class="panel__title" data-i18n="exp_build_title">Dirección y Construcción</h3>
-            <p class="panel__text" data-i18n="exp_build_text">Proyectos ejecutados o dirigidos técnicamente.</p>
-          </div>
-          <div class="panel__media">
-            <img src="assets/img/exp-obra-1.jpg" alt="Ejemplo de obra" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        <div class="grid four">
+          <a class="tile" href="#contacto" aria-label="Proyectos Residenciales">
+            <div class="tile-img" style="background-image:url('assets/img/thumb-residencial.jpg');"></div>
+            <div class="tile-body">
+              <h3 data-i18n="res_title">Proyectos Residenciales</h3>
+              <p data-i18n="res_text">Vivienda con diseño funcional, ubicación estratégica y valorización sostenida.</p>
+              <span class="tile-cta" data-i18n="tile_cta">Solicitar información →</span>
+            </div>
+          </a>
 
-  <!-- Alianzas Estratégicas -->
-  <section class="section section--alt" id="alianzas">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="section__title" data-i18n="all_title">Alianzas Estratégicas</h2>
-        <p class="section__lead" data-i18n="all_lead">
-          Invitación profesional a inversionistas y socios para conocer oportunidades y proyectos.
-        </p>
-      </div>
+          <a class="tile" href="#contacto" aria-label="Proyectos Comerciales">
+            <div class="tile-img" style="background-image:url('assets/img/thumb-comercial.jpg');"></div>
+            <div class="tile-body">
+              <h3 data-i18n="com_title">Proyectos Comerciales</h3>
+              <p data-i18n="com_text">Espacios comerciales concebidos para consolidación urbana y dinamismo económico.</p>
+              <span class="tile-cta" data-i18n="tile_cta">Solicitar información →</span>
+            </div>
+          </a>
 
-      <div class="callout">
-        <div class="callout__text">
-          <h3 data-i18n="all_box_title">Conversemos sobre oportunidades</h3>
-          <p data-i18n="all_box_text">
-            Promovemos proyectos bajo criterios técnicos y planificación estructurada. Si busca invertir o asociarse, contáctenos para recibir información.
-          </p>
-        </div>
-        <div class="callout__actions">
-          <a class="btn btn--primary" href="#contacto" data-i18n="all_btn">Solicitar información</a>
-          <a class="btn btn--secondary" id="waInline" target="_blank" rel="noopener"
-             href="https://wa.me/593999852110?text=Hola%2C%20deseo%20recibir%20informaci%C3%B3n%20sobre%20ARQA-GRUPO%20INMOBILIARIO.">
-            WhatsApp
+          <a class="tile" href="#contacto" aria-label="Proyectos Industriales">
+            <div class="tile-img" style="background-image:url('assets/img/thumb-industrial.jpg');"></div>
+            <div class="tile-body">
+              <h3 data-i18n="ind_title">Proyectos Industriales</h3>
+              <p data-i18n="ind_text">Infraestructura logística e industrial orientada a eficiencia operativa.</p>
+              <span class="tile-cta" data-i18n="tile_cta">Solicitar información →</span>
+            </div>
+          </a>
+
+          <a class="tile" href="#contacto" aria-label="Proyectos Patrimoniales">
+            <div class="tile-img" style="background-image:url('assets/img/thumb-patrimonial.jpg');"></div>
+            <div class="tile-body">
+              <h3 data-i18n="pat_title">Proyectos Patrimoniales</h3>
+              <p data-i18n="pat_text">Puesta en valor de activos históricos con criterio técnico y urbano.</p>
+              <span class="tile-cta" data-i18n="tile_cta">Solicitar información →</span>
+            </div>
           </a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contacto -->
-  <section class="section" id="contacto">
-    <div class="container">
-      <div class="section__head">
-        <h2 class="section__title" data-i18n="contact_title">Contacto</h2>
-        <p class="section__lead" data-i18n="contact_lead">
-          Complete el formulario y nos comunicaremos con usted.
-        </p>
-      </div>
+    <!-- EXPERIENCIA TÉCNICA -->
+    <section class="section" id="experiencia">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="exp_title">Experiencia Técnica</h2>
+          <p data-i18n="exp_text">Galería de proyectos de diseño, colaboración y dirección / construcción (se amplía con el tiempo).</p>
+        </div>
 
-      <div class="grid grid--2">
-        <form class="form" id="contactForm">
-          <div class="form__row">
-            <label data-i18n="f_name">Nombre completo</label>
-            <input name="name" required />
+        <div class="exp-block">
+          <div class="exp-head">
+            <h3 data-i18n="exp_design_title">Diseño Arquitectónico</h3>
           </div>
-
-          <div class="form__row">
-            <label data-i18n="f_phone">Teléfono</label>
-            <input name="phone" required />
+          <div class="gallery">
+            <img src="assets/img/exp-diseno-1.jpg" alt="Proyecto de diseño 1" loading="lazy">
+            <img src="assets/img/exp-diseno-2.jpg" alt="Proyecto de diseño 2" loading="lazy">
           </div>
+        </div>
 
-          <div class="form__row">
-            <label data-i18n="f_email">Correo</label>
-            <input type="email" name="email" required />
+        <div class="exp-block">
+          <div class="exp-head">
+            <h3 data-i18n="exp_build_title">Dirección y Construcción</h3>
           </div>
-
-          <div class="form__row">
-            <label data-i18n="f_city">Ciudad de interés</label>
-            <select name="city" required>
-              <option value="Quito" data-i18n="city_quito">Quito</option>
-              <option value="Guayaquil" data-i18n="city_gye">Guayaquil</option>
-              <option value="Cuenca" data-i18n="city_cuenca">Cuenca</option>
-              <option value="Otra" data-i18n="city_other">Otra</option>
-            </select>
+          <div class="gallery">
+            <img src="assets/img/exp-obra-1.jpg" alt="Proyecto construcción 1" loading="lazy">
+            <img src="assets/img/exp-obra-2.jpg" alt="Proyecto construcción 2" loading="lazy">
           </div>
-
-          <div class="form__row">
-            <label data-i18n="f_interest">Tipo de interés</label>
-            <select name="interest" required>
-              <option value="Compra" data-i18n="i_buy">Compra de propiedad</option>
-              <option value="Inversion" data-i18n="i_invest">Inversión</option>
-              <option value="Asociacion" data-i18n="i_partner">Asociación estratégica</option>
-            </select>
-          </div>
-
-          <div class="form__row">
-            <label data-i18n="f_msg">Mensaje</label>
-            <textarea name="message" rows="5" required></textarea>
-          </div>
-
-          <button class="btn btn--primary" type="submit" data-i18n="f_submit">Enviar</button>
-          <p class="form__hint" id="formHint" aria-live="polite"></p>
-        </form>
-
-        <div class="contactbox">
-          <h3 data-i18n="contact_box_title">Canales directos</h3>
-          <p class="contactbox__p"><span data-i18n="contact_box_city">Ciudades:</span> Quito · Guayaquil · Cuenca</p>
-          <p class="contactbox__p"><span data-i18n="contact_box_email">Email:</span> <a href="mailto:contacto@arqagrupoinmobiliario.com.ec">contacto@arqagrupoinmobiliario.com.ec</a></p>
-          <p class="contactbox__p"><span data-i18n="contact_box_phone">Teléfono:</span> +593 00 000 0000</p>
-
-          <div class="contactbox__actions">
-            <a class="btn btn--secondary" target="_blank" rel="noopener"
-               href="https://wa.me/593000000000?text=Hola%2C%20quisiera%20informaci%C3%B3n%20sobre%20ARQA-GRUPO%20INMOBILIARIO.">
-              WhatsApp
-            </a>
-          </div>
-
-          <p class="contactbox__note" data-i18n="contact_box_note">
-            *Actualice el número de WhatsApp y el teléfono en el código antes de publicar.
-          </p>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container footer__inner">
+    <!-- ALIANZAS -->
+    <section class="section alt" id="alianzas">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="inv_title">Alianzas Estratégicas</h2>
+          <p data-i18n="inv_text">
+            Desarrollamos oportunidades inmobiliarias bajo criterios técnicos y planificación estructurada. Invitamos a aliados estratégicos a conocer nuestros proyectos.
+          </p>
+        </div>
+
+        <div class="cta-panel">
+          <div>
+            <h3 data-i18n="inv_panel_title">Conversemos</h3>
+            <p data-i18n="inv_panel_text">Compártenos tu perfil de interés y te contactamos.</p>
+          </div>
+          <a class="btn btn-primary" href="#contacto" data-i18n="inv_panel_btn">Solicitar información</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <div class="section-head">
+          <h2 data-i18n="contact_title">Contacto</h2>
+          <p data-i18n="contact_text">Completa el formulario y nos comunicaremos contigo.</p>
+        </div>
+
+        <!-- FORM: opción A Formspree (recomendado) -->
+        <!-- 1) crea un form en formspree.io y reemplaza action con tu endpoint -->
+        <form class="form" id="contactForm" action="https://formspree.io/f/REEMPLAZA_ESTO" method="POST">
+          <div class="form-row">
+            <label>
+              <span data-i18n="f_name">Nombre completo</span>
+              <input name="name" type="text" required autocomplete="name" />
+            </label>
+
+            <label>
+              <span data-i18n="f_phone">Teléfono</span>
+              <input name="phone" type="tel" required autocomplete="tel" />
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <span data-i18n="f_email">Correo</span>
+              <input name="email" type="email" required autocomplete="email" />
+            </label>
+
+            <label>
+              <span data-i18n="f_city">Ciudad de interés</span>
+              <select name="city" required>
+                <option value="" disabled selected data-i18n="f_city_pick">Selecciona</option>
+                <option value="Quito">Quito</option>
+                <option value="Guayaquil">Guayaquil</option>
+                <option value="Cuenca">Cuenca</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form-row">
+            <label>
+              <span data-i18n="f_interest">Tipo de interés</span>
+              <select name="interest" required>
+                <option value="" disabled selected data-i18n="f_interest_pick">Selecciona</option>
+                <option value="Compra" data-i18n="f_interest_buy">Compra de propiedad</option>
+                <option value="Inversion" data-i18n="f_interest_invest">Inversión</option>
+                <option value="Alianza" data-i18n="f_interest_partner">Asociación estratégica</option>
+              </select>
+            </label>
+
+            <label>
+              <span data-i18n="f_category">Línea</span>
+              <select name="category" required>
+                <option value="" disabled selected data-i18n="f_category_pick">Selecciona</option>
+                <option value="Residencial" data-i18n="res_title">Proyectos Residenciales</option>
+                <option value="Comercial" data-i18n="com_title">Proyectos Comerciales</option>
+                <option value="Industrial" data-i18n="ind_title">Proyectos Industriales</option>
+                <option value="Patrimonial" data-i18n="pat_title">Proyectos Patrimoniales</option>
+              </select>
+            </label>
+          </div>
+
+          <label>
+            <span data-i18n="f_msg">Mensaje</span>
+            <textarea name="message" rows="6" required></textarea>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn btn-primary" type="submit" data-i18n="f_send">Enviar</button>
+            <p class="form-note" id="formNote" aria-live="polite"></p>
+          </div>
+        </form>
+
+        <div class="contact-foot">
+          <div class="mini">
+            <div class="mini-title">ARQA-GRUPO INMOBILIARIO</div>
+            <div class="mini-sub" data-i18n="tagline">Visión urbana y desarrollo estratégico</div>
+          </div>
+          <div class="mini">
+            <div class="mini-title" data-i18n="cities">Ciudades</div>
+            <div class="mini-sub">Quito · Guayaquil · Cuenca</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Floating Button -->
+  <a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <span class="wa-icon">✆</span>
+    <span class="wa-text" data-i18n="wa">WhatsApp</span>
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
       <div>
-        <div class="footer__brand">ARQA-GRUPO INMOBILIARIO</div>
-        <div class="footer__tag" data-i18n="tagline">Visión urbana y desarrollo estratégico</div>
+        <div class="footer-brand">ARQA-GRUPO INMOBILIARIO</div>
+        <div class="footer-tag" data-i18n="tagline">Visión urbana y desarrollo estratégico</div>
       </div>
-      <div class="footer__links">
-        <a href="#firma" data-i18n="nav_firma">Firma</a>
-        <a href="#proyectos" data-i18n="nav_proyectos">Proyectos</a>
-        <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
+      <div class="footer-right">
+        <span>© <span id="year"></span> ARQA</span>
       </div>
-      <div class="footer__copy">© <span id="year"></span> ARQA-GRUPO INMOBILIARIO</div>
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
-
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const slides = document.querySelectorAll(".hero_slide");
-    let current = 0;
-
-    if (slides.length > 0) {
-        slides[current].classList.add("is-active");
-
-        setInterval(function() {
-            slides[current].classList.remove("is-active");
-            current = (current + 1) % slides.length;
-            slides[current].classList.add("is-active");
-        }, 4000);
-    }
-});
-</script>
-
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
 
