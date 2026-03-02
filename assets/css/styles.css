@@ -341,3 +341,16 @@ img{max-width:100%; display:block}
   box-shadow: 0 0 0 6px rgba(37,211,102,.12);
 }
 .wa-text{font-size:13px; font-weight:600; color:#15202c}
+.project-gallery {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 15px 0 20px;
+}
+
+.project-gallery img {
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  height: auto;
+}
