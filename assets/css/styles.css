@@ -349,7 +349,7 @@ img{max-width:100%; display:block}
 }
 
 .project-gallery img {
-  width: 40% !important;
+  width: 220px;
   border-radius: 10px;
   height: auto;
 }
