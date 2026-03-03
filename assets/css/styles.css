@@ -353,8 +353,8 @@ img{max-width:100%; display:block}
   border-radius: 10px;
   height: auto;
 }
+
 .proyecto img {
-   width: 600px;
-   max-width: 100%;
-   height: auto;
+   width: 250px !important;
+   height: auto !important;
 }
