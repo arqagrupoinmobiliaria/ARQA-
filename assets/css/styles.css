@@ -347,9 +347,8 @@ img{max-width:100%; display:block}
   flex-wrap: wrap;
   margin: 15px 0 20px;
 }
-
-.proyecto img {
-    width: 50%;
+.project-gallery img {
+    width: 48%;
     height: auto;
     border-radius: 10px;
 }
