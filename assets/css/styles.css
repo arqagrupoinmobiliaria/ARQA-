@@ -451,3 +451,16 @@ img{max-width:100%; display:block}
   font-size: 14px;
   margin-bottom: 10px;
 }
+#firma .grid {
+    align-items: stretch;
+}
+
+#firma .card {
+    height: 100%;
+}
+
+.firma-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
