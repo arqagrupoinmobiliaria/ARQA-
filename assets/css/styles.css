@@ -412,10 +412,10 @@ img{max-width:100%; display:block}
   box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 .firma-img {
-  width: 140px;
-  height: 140px;
+  width: 180px;
+  height: 220px;
   object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 15px;
+  border-radius: 12%;
+  margin: 0 auto 15px auto;
   display: block;
 }
