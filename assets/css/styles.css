@@ -352,3 +352,62 @@ img{max-width:100%; display:block}
     height: auto;
     border-radius: 10px;
 }
+.capabilities {
+  margin-top: 80px;
+}
+
+.capabilities h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.section-subtitle {
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.capabilities-grid {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.cap-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  padding: 25px;
+  flex: 1;
+  min-width: 280px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cap-card img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.cap-card h3 {
+  margin-bottom: 10px;
+}
+
+.cap-card p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.cap-card ul {
+  padding-left: 18px;
+}
+
+.cap-card li {
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.cap-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
