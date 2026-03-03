@@ -411,3 +411,11 @@ img{max-width:100%; display:block}
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
+.firma-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 15px;
+  display: block;
+}
