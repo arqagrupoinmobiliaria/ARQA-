@@ -477,3 +477,21 @@ img{max-width:100%; display:block}
     align-items: center;
     gap: 20px;
 }
+/* FIX: Firma y secciones de abajo alineadas */
+#firma .grid.grid--2{
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+  align-items: start;
+}
+
+#firma .card.firma-card{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* espacio consistente entre Firma y lo que viene abajo */
+#firma{
+  padding-bottom: 60px;
+}
