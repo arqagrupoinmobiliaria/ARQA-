@@ -427,12 +427,12 @@ img{max-width:100%; display:block}
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
 }
 
-.card__title {
+#firma .card__title {
   font-size: 18px;
   font-weight: 600;
 }
 
-.card__subtitle {
+#firma .card__subtitle {
   font-size: 13px;
   color: #777;
   margin-bottom: 12px;
