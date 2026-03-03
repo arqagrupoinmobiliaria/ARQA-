@@ -348,14 +348,8 @@ img{max-width:100%; display:block}
   margin: 15px 0 20px;
 }
 
-.project-gallery img {
-  width: 220px;
-  border-radius: 10px;
-  height: auto;
-}
-
 .proyecto img {
-width: 400px !important;
-display: block;
-margin: 20px auto;
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
 }
