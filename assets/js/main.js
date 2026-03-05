@@ -205,7 +205,7 @@ const I18N = {
     line_pat_text: "Enhancement of heritage assets through technical criteria and urban coherence.",
     line_pat_title: "Heritage Projects",
     line_pat_text: "Enhancing historic assets with technical criteria and urban coherence.",
-    line_cta: "Request information",
+    line_cta: "View projects",
 
     exp_title: "Technical Experience",
     exp_lead: "A practical section to upload design and construction projects progressively.",
