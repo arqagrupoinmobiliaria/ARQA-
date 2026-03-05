@@ -245,6 +245,7 @@ const I18N = {
     contact_box_note: "*Update WhatsApp number and phone in the code before publishing."
   }
 };
+const dict= I18N;
 
 let currentLang = "es";
 const langES = document.getElementById("langES");
