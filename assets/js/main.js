@@ -191,10 +191,10 @@ const I18N = {
 
     firma_title: "Firm",
     firma_lead: "We are a development firm focused on planning and delivering strategic real estate projects in Ecuador.",
-    firma_marcela_role: "Architect – Architectural Director",
+    firma_marcela_role: "Architect – Architectural Lead",
     firma_marcela_text: "Leads architectural design and technical planning, ensuring urban coherence, spatial efficiency and high standards.",
     firma_mauricio_role: "Real Estate Developer",
-    firma_mauricio_text: "Specialized in project structuring, strategic land analysis and comprehensive development with a long-term vision.",
+    firma_mauricio_text: "Specialized in real state project structuring, strategic land analysis and value-driven development with a long-term investment perspective.",
 
     lines_title: "Development Lines",
     lines_lead: "Four clear verticals to address opportunities with technical criteria and strategic vision.",
