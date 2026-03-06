@@ -29,8 +29,8 @@ img{max-width:100%; display:block}
 .section{padding:72px 0}
 .section--alt{background:var(--alt)}
 .section__head{margin-bottom:22px}
-.section__title{margin:0 0 8px; font-size:28px; letter-spacing:.2px}
-.section__lead{margin:0; color:var(--muted); max-width:70ch}
+.section__title{margin:0 0 8px; font-size:28px; letter-spacing:.2px;text-align:center;}
+.section__lead{margin:0 auto; color:var(--muted); max-width:70ch;text-align:center;}
 
 .grid{display:grid; gap:18px}
 .grid--2{grid-template-columns:repeat(2,minmax(0,1fr))}
