@@ -135,7 +135,7 @@ const I18N = {
     line_ind_text: "Infraestructura logística e industrial enfocada en eficiencia operativa y expansión.",
     line_pat_title: "Proyectos Patrimoniales",
     line_pat_text: "Puesta en valor de activos históricos con criterio técnico y coherencia urbana.",
-    line_cta: "Solicitar información",
+    line_cta: "Explorar proyectos",
 
     exp_title: "Experiencia Técnica",
     exp_lead: "Sección práctica para subir proyectos de diseño y construcción progresivamente.",
