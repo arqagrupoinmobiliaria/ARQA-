@@ -196,22 +196,22 @@ const I18N = {
     firma_mauricio_role: "Real Estate Developer",
     firma_mauricio_text: "Specialized in real state project structuring, strategic land analysis and value-driven development with a long-term investment perspective.",
 
-  lines_title: "Development Lines",
-lines_lead: "Four development areas addressing real estate opportunities with technical criteria and strategic vision.",
+    lines_title: "Development Lines",
+    lines_lead: "Four development areas addressing real estate opportunities with technical criteria and strategic vision.",
 
-line_res_title: "Residential Projects",
-line_res_text: "Residential developments focused on functionality, location and long-term value.",
+    line_res_title: "Residential Projects",
+    line_res_text: "Residential developments focused on functionality, location and long-term value.",
 
-line_com_title: "Commercial Projects",
-line_com_text: "Strategic commercial spaces designed to activate urban areas and strengthen business presence.",
+    line_com_title: "Commercial Projects",
+    line_com_text: "Strategic commercial spaces designed to activate urban areas and strengthen business presence.",
 
-line_ind_title: "Industrial Projects",
-line_ind_text: "Industrial and logistics infrastructure focused on operational efficiency and scalability.",
+    line_ind_title: "Industrial Projects",
+    line_ind_text: "Industrial and logistics infrastructure focused on operational efficiency and scalability.",
 
-line_pat_title: "Heritage Projects",
-line_pat_text: "Enhancing historic assets with technical criteria and urban coherence.",
+    line_pat_title: "Heritage Projects",
+    line_pat_text: "Enhancing historic assets with technical criteria and urban coherence.",
 
-line_cta: "Explore projects",
+    line_cta: "Explore projects",
 
     exp_title: "Technical Experience",
     exp_lead: "A practical section to upload design and construction projects progressively.",
