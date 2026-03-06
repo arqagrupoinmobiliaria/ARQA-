@@ -201,7 +201,7 @@ const I18N = {
     line_res_title: "Residential Projects",
     line_res_text: "Residential developments focused on functionality, location and long-term value.",
     line_com_text: "Strategic commercial spaces designed to activate urban areas and strengthen business presence.",
-    line_ind_text: "Industrial and logistics infrastructure focused on operational efficiency and scalability."
+    line_ind_text: "Industrial and logistics infrastructure focused on operational efficiency and scalability.",
     line_pat_title: "Heritage Projects",
     line_pat_text: "Enhancing historic assets with technical criteria and urban coherence.",
     line_cta: "View projects",
