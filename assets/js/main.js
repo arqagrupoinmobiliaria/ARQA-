@@ -137,6 +137,20 @@ const I18N = {
     line_pat_text: "Puesta en valor de activos históricos con criterio técnico y coherencia urbana.",
     line_cta: "Explorar proyectos",
 
+    line_pat_text: "Puesta en valor de activos históricos con criterio técnico y coherencia urbana.",
+line_cta: "Explorar proyectos",
+
+cap_arch_title: "Diseño Arquitectónico Estratégico",
+cap_arch_text: "Desarrollo de proyectos residenciales y comerciales optimizados en normativa, eficiencia constructiva y rentabilidad.",
+
+cap_const_title: "Dirección y Control de Construcción",
+cap_const_text: "Gestión técnica integral enfocada en control de costos, calidad y cumplimiento de cronograma.",
+
+cap_dev_title: "Desarrollo y Estructuración Inmobiliaria",
+cap_dev_text: "Identificación y estructuración de oportunidades inmobiliarias desde el análisis de suelo hasta la ejecución final.",
+
+exp_title: "Experiencia Técnica",
+
     exp_title: "Experiencia Técnica",
     exp_lead: "Sección práctica para subir proyectos de diseño y construcción progresivamente.",
     exp_design_title: "Diseño Arquitectónico",
@@ -212,6 +226,15 @@ const I18N = {
     line_pat_text: "Enhancing historic assets with technical criteria and urban coherence.",
 
     line_cta: "Explore projects",
+
+    cap_arch_title: "Strategic Architectural Design",
+cap_arch_text: "Development of residential and commercial projects optimized in regulations, construction efficiency and profitability.",
+
+cap_const_title: "Construction Management and Control",
+cap_const_text: "Integrated technical management focused on cost control, quality and schedule compliance.",
+
+cap_dev_title: "Real Estate Development and Structuring",
+cap_dev_text: "Identification and structuring of real estate opportunities from land analysis to final execution.",
 
     exp_title: "Technical Experience",
     exp_lead: "A practical section to upload design and construction projects progressively.",
