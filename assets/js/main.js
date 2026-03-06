@@ -227,6 +227,18 @@ exp_title: "Experiencia Técnica",
 
     line_cta: "Explore projects",
 
+   cap_title: "Technical Capabilities and Real Estate Development",
+cap_text: "Strategic integration between architectural design, technical management and real estate development.",
+
+cap_arch_title: "Strategic Architectural Design",
+cap_arch_text: "Development of residential and commercial projects optimized in regulations, construction efficiency and profitability.",
+
+cap_const_title: "Construction Management and Control",
+cap_const_text: "Integrated technical management focused on cost control, quality and schedule compliance.",
+
+cap_dev_title: "Real Estate Development and Structuring",
+cap_dev_text: "Identification and structuring of real estate opportunities from land analysis to final execution.",
+
     cap_arch_title: "Strategic Architectural Design",
 cap_arch_text: "Development of residential and commercial projects optimized in regulations, construction efficiency and profitability.",
 
@@ -236,6 +248,21 @@ cap_const_text: "Integrated technical management focused on cost control, qualit
 cap_dev_title: "Real Estate Development and Structuring",
 cap_dev_text: "Identification and structuring of real estate opportunities from land analysis to final execution.",
 
+cap_arch_b1: "Conceptual and executive design",
+cap_arch_b2: "Optimization of sellable area",
+cap_arch_b3: "Efficient and sustainable design",
+cap_arch_b4: "Integrated technical coordination",
+
+cap_const_b1: "Specialized technical supervision",
+cap_const_b2: "Budget control",
+cap_const_b3: "Resource optimization",
+cap_const_b4: "Contractor management",
+
+cap_dev_b1: "Financial feasibility analysis",
+cap_dev_b2: "Investment structuring",
+cap_dev_b3: "Phased development",
+cap_dev_b4: "Strategic project management",
+    
     exp_title: "Technical Experience",
     exp_lead: "A practical section to upload design and construction projects progressively.",
     exp_design_title: "Architectural Design",
