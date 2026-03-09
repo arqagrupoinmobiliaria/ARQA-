@@ -200,7 +200,6 @@ cap_dev_b4: "Gestión estratégica del proyecto",
     contact_box_city: "Ciudades:",
     contact_box_email: "Email:",
     contact_box_phone: "Teléfono:",
-    contact_box_note: "*Actualice el número de WhatsApp y el teléfono en el código antes de publicar."
   },
 
   en: {
@@ -317,7 +316,6 @@ cap_dev_b4: "Strategic project management",
     contact_box_city: "Cities:",
     contact_box_email: "Email:",
     contact_box_phone: "Phone:",
-    contact_box_note: "*Update WhatsApp number and phone in the code before publishing."
   }
 };
 const dict= I18N;
