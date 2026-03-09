@@ -241,6 +241,17 @@ cap_dev_b4: "Gestión estratégica del proyecto",
     line_pat_text: "Enhancing historic assets with technical criteria and urban coherence.",
 
     line_cta: "Explore projects",
+    cap_title: "Capacidades Técnicas y Desarrollo Inmobiliario",
+cap_text: "Integración estratégica entre diseño arquitectónico, gestión técnica y desarrollo inmobiliario.",
+
+cap_arch_title: "Diseño Arquitectónico Estratégico",
+cap_arch_text: "Desarrollo de proyectos residenciales y comerciales optimizados en normativa, eficiencia constructiva y rentabilidad.",
+
+cap_const_title: "Dirección y Control de Construcción",
+cap_const_text: "Gestión técnica integral enfocada en control de costos, calidad y cumplimiento de cronograma.",
+
+cap_dev_title: "Desarrollo y Estructuración Inmobiliaria",
+cap_dev_text: "Identificación y estructuración de oportunidades inmobiliarias desde el análisis de suelo hasta la ejecución final.",
 
    cap_title: "Technical Capabilities and Real Estate Development",
 cap_text: "Strategic integration between architectural design, technical management and real estate development.",
