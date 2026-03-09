@@ -495,3 +495,34 @@ img{max-width:100%; display:block}
 #firma{
   padding-bottom: 60px;
 }
+.lang {
+display: flex;
+gap: 8px;
+align-items: center;
+}
+
+.lang_btn {
+display: flex;
+align-items: center;
+gap: 6px;
+background: none;
+border: none;
+cursor: pointer;
+font-size: 12px;
+color: #fff;
+opacity: 0.7;
+}
+
+.lang_btn:hover {
+opacity: 1;
+}
+.lang_btn img {
+height: 14px;
+width: auto;
+border-radius: 2px;
+}
+.lang_btn img {
+height: 14px;
+width: auto;
+border-radius: 2px;
+}
