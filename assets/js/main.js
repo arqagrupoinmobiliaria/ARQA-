@@ -165,8 +165,6 @@ cap_dev_b3: "Desarrollo por etapas",
 cap_dev_b4: "Gestión estratégica del proyecto",  
 
     exp_title: "Experiencia Técnica",
-
-    exp_title: "Experiencia Técnica",
     exp_lead: "Sección práctica para subir proyectos de diseño y construcción progresivamente.",
     exp_design_title: "Diseño Arquitectónico",
     exp_design_text: "Proyectos de diseño y colaboración con otros arquitectos.",
