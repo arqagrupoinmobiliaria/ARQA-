@@ -704,3 +704,24 @@ h3 {
   margin-top: 40px;
   margin-bottom: 15px;
 }
+.modelo-btn {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.modelo-btn a {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid #0B1C2D;
+  color: #0B1C2D;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.modelo-btn a:hover {
+  background: #0B1C2D;
+  color: #fff;
+}
