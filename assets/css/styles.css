@@ -619,3 +619,47 @@ border-radius: 2px;
 #modelos {
   margin-top: 60px;
 }
+/* ===== MODELOS DE VIVIENDA (MEJORA PRO) ===== */
+
+#modelos {
+  margin-top: 60px;
+}
+
+.modelo-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.modelo-card:hover {
+  transform: translateY(-6px);
+}
+
+.modelo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.modelo-card h3 {
+  margin-bottom: 10px;
+}
+
+.modelo-card p {
+  font-size: 14px;
+  color: #555;
+}
+
+.modelo-card a {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+/* Mejora del grid */
+.grid--3 {
+  grid-template-columns: repeat(3, minmax(250px, 1fr));
+}
