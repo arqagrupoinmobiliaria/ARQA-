@@ -725,3 +725,6 @@ h3 {
   background: #0B1C2D;
   color: #fff;
 }
+.lang-en {
+  display: none;
+}
