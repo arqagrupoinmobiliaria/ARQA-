@@ -575,3 +575,36 @@ border-radius: 2px;
   display: inline-block;
   margin-top: 10px;
 }
+.grid--3{
+  grid-template-columns: repeat(3, minmax(0,1fr));
+}
+
+@media (max-width: 960px){
+  .grid--3{
+    grid-template-columns: repeat(2, minmax(0,1fr));
+  }
+}
+
+@media (max-width: 680px){
+  .grid--3{
+    grid-template-columns: 1fr;
+  }
+}
+
+.modelo-card{
+  text-align:center;
+  padding:20px;
+}
+
+.modelo-card img{
+  width:100%;
+  height:200px;
+  object-fit:cover;
+  border-radius:12px;
+  margin-bottom:15px;
+}
+
+.modelo-card a{
+  display:inline-block;
+  margin-top:12px;
+}
