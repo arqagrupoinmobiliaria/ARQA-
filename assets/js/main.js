@@ -84,8 +84,10 @@ function renderSlides(){
 
 function goToSlide(idx, restart){
   sliderIndex = idx;
+
   const all = [...document.querySelectorAll(".hero__slide")];
   const dots = [...document.querySelectorAll(".dot")];
+
   all.forEach((el, i) => el.classList.toggle("is-active", i === sliderIndex));
   dots.forEach((el, i) => el.classList.toggle("is-active", i === sliderIndex));
 
