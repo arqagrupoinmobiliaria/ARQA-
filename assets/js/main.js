@@ -198,6 +198,14 @@ cap_dev_b4: "Gestión estratégica del proyecto",
     contact_box_city: "Ciudades:",
     contact_box_email: "Email:",
     contact_box_phone: "Teléfono:",
+    models_title: "Modelos de Vivienda",
+    
+models_lead: "Inspírate con nuestros diseños pensados para cada estilo de vida.",
+style_contemporary: "Estilo Contemporáneo",
+style_modern: "Estilo Moderno",
+style_rustic: "Estilo Rústico",
+consult_style: "Consultar este estilo",
+    
   },
 
   en: {
@@ -314,6 +322,13 @@ cap_dev_b4: "Strategic project management",
     contact_box_city: "Cities:",
     contact_box_email: "Email:",
     contact_box_phone: "Phone:",
+    models_title: "Home Models",
+    
+models_lead: "Explore our home designs tailored to every lifestyle.",
+style_contemporary: "Contemporary Style",
+style_modern: "Modern Style",
+style_rustic: "Rustic Style",
+consult_style: "Explore this style",
   }
 };
 const dict= I18N;
