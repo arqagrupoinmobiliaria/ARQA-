@@ -404,6 +404,3 @@ contactForm?.addEventListener("submit", (e) => {
     ? "Se abrió su correo para enviar el mensaje. Si no se abre, escríbanos por WhatsApp."
     : "Your email client was opened to send the message. If it doesn’t open, message us on WhatsApp.";
 });
-.lang-en {
-  display: none;
-}
