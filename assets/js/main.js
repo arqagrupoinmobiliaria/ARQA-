@@ -3,7 +3,9 @@
 // =============================
 const header = document.getElementById("siteHeader");
 const yearEl = document.getElementById("year");
-yearEl.textContent = String(new Date().getFullYear());
+if (yearEl) {
+  yearEl.textContent = String(new Date().getFullYear());
+}
 
 function onScrollHeader(){
   const y = window.scrollY || 0;
@@ -15,8 +17,10 @@ function onScrollHeader(){
     header.classList.remove("header--solid");
   }
 }
-window.addEventListener("scroll", onScrollHeader);
-onScrollHeader();
+if (header) {
+  window.addEventListener("scroll", onScrollHeader);
+  onScrollHeader();
+}
 
 // =============================
 // Mobile nav toggle
