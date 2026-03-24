@@ -25,13 +25,19 @@ if (header) {
 // =============================
 // Mobile nav toggle
 // =============================
-const navToggle = document.getElementById("navToggle");
-const navLinks = document.getElementById("navLinks");
+if (navToggle && navLinks) {
+  navToggle.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("is-open");
+    navToggle.setAttribute("aria-expanded", String(isOpen));
+  });
 
-navToggle?.addEventListener("click", () => {
-  const isOpen = navLinks.classList.toggle("is-open");
-  navToggle.setAttribute("aria-expanded", String(isOpen));
-});
+  navLinks.addEventListener("click", (e) => {
+    const a = e.target.closest("a");
+    if (!a) return;
+    navLinks.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+  });
+}
 
 // Close nav on click (mobile)
 navLinks?.addEventListener("click", (e) => {
