@@ -740,3 +740,21 @@ h3 {
 #modelos {
   display: block !important;
 }
+/* FIX MODELOS MOBILE */
+#modelos {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+.modelos-grid {
+  display: grid !important;
+  grid-template-columns: 1fr !important;
+  gap: 15px !important;
+}
+
+.modelos-grid img {
+  width: 100% !important;
+  height: auto !important;
+  display: block !important;
+}
