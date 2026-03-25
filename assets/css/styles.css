@@ -725,3 +725,15 @@ h3 {
   background: #0B1C2D;
   color: #fff;
 }
+@media (max-width: 768px) {
+  .modelos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .modelos-grid img {
+    width: 100%;
+    height: auto;
+  }
+}
