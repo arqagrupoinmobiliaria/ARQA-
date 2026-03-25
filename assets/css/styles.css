@@ -758,3 +758,17 @@ h3 {
   height: auto !important;
   display: block !important;
 }
+/* FIX MODELOS EN CELULAR */
+@media (max-width: 768px) {
+
+  #modelos {
+    display: block !important;
+  }
+
+  .modelos-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 15px;
+  }
+
+}
