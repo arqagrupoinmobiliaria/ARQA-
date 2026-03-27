@@ -575,3 +575,8 @@ border-radius: 2px;
     height: auto;
   }
 }
+#modelos {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
