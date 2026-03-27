@@ -637,6 +637,8 @@ border-radius: 2px;
     margin: 0 auto;
     text-align: center;
 }
-.modelos-grid {
-    margin: 0 auto;
+
+.modelo-btn {
+    text-align: left;
+    margin-top: 10px;
 }
