@@ -628,3 +628,7 @@ border-radius: 2px;
         height: auto;
     }
 }
+.modelo-btn {
+    text-align: center;
+    margin-top: 10px;
+}
