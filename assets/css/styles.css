@@ -683,15 +683,15 @@ border-radius: 2px;
 .modelos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-.modelos-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 15px;
-  margin-bottom: 40px;
+  max-width: 900px;
+  margin: 0 auto 40px auto;
+}
+.modelos-grid img {
+ with: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px
 }
 h3 {
   margin-top: 40px;
@@ -772,5 +772,15 @@ h3 {
 
   .modelos-grid img {
     height: auto;
+  }
+}
+@media (max-width: 768px) {
+  .modelos-grid {
+    grid-template-columns: 1fr;
+    max-width: 95%;
+  }
+
+  .modelos-grid img {
+    height: 160px;
   }
 }
