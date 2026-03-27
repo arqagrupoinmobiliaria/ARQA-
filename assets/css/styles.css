@@ -550,7 +550,8 @@ border-radius: 2px;
   grid-template-columns: repeat(3, 1fr);
   gap: 15px;
   max-width: 900px;
-  margin: 0 auto 40px auto;
+  margin: 40px auto;
+  text-align: center;
 }
 
 .modelos-grid img {
