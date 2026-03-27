@@ -548,10 +548,10 @@ border-radius: 2px;
 .modelos-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px;
-  max-width: 900px;
-  margin: 40px auto;
-  text-align: center;
+  gap: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 .modelos-grid img {
@@ -576,4 +576,21 @@ border-radius: 2px;
     height: auto;
   }
 }
+/* MOBILE FINAL */
+@media (max-width: 768px) {
+    .modelos-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
 
+    .modelos-grid img {
+        height: 140px;
+    }
+
+    .brand__logo img {
+        width: 140px;
+        height: auto;
+    }
+}
