@@ -639,7 +639,9 @@ border-radius: 2px;
 /* ===== MODELOS DE VIVIENDA (MEJORA PRO) ===== */
 
 #modelos {
-  margin-top: 60px;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
 }
 
 .modelo-card {
@@ -742,5 +744,12 @@ h3 {
 
   .modelos-grid img {
     height: 90px;
+  }
+}
+@media (max-width: 768px) {
+  #modelos {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
   }
 }
