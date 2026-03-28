@@ -612,3 +612,53 @@ border-radius: 2px;
     height: auto;
   }
 }
+/* ===== FIX MOBILE GENERAL ===== */
+@media (max-width: 768px) {
+
+  .container,
+  section {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .modelos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .modelos-grid img {
+    width: 100%;
+    height: auto;
+  }
+
+  .modelo-btn {
+    text-align: left;
+    margin-top: 10px;
+  }
+
+  .capabilities {
+    padding: 40px 20px;
+  }
+
+  .team-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .team-card {
+    width: 100%;
+  }
+
+  /* WhatsApp botón */
+  .whatsapp {
+    bottom: 15px;
+    right: 15px;
+    z-index: 999;
+  }
+
+}
+.modelo-btn {
+  text-align: left;
+}
