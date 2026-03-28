@@ -662,3 +662,9 @@ border-radius: 2px;
 .modelo-btn {
   text-align: left;
 }
+/* FIX MOBILE FIRMA */
+@media (max-width: 768px) {
+  .grid--2 {
+    grid-template-columns: 1fr;
+  }
+}
