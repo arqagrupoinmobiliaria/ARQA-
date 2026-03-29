@@ -780,3 +780,6 @@ border-radius: 2px;
   }
 
 }
+body {
+  background: red !important;
+}
