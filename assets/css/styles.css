@@ -683,3 +683,23 @@ border-radius: 2px;
     flex-direction: column;
   }
 }
+.firma-container {
+  display: flex;
+  gap: 20px;
+}
+
+.firma-card {
+  flex: 1;
+}
+
+/* 🔥 FIX REAL MOBILE */
+@media (max-width: 768px) {
+  .firma-container {
+    display: block !important;
+  }
+
+  .firma-card {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}
