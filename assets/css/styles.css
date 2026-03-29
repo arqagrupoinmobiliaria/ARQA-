@@ -808,3 +808,22 @@ border-radius: 2px;
   }
 
 }
+@media (max-width: 600px) {
+
+  #firma .firma-card {
+    max-width: 100% !important;
+    width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  #firma .firma-info {
+    width: 100% !important;
+  }
+
+  #firma .card__title,
+  #firma .card__subtitle,
+  #firma p {
+    word-wrap: break-word;
+  }
+
+}
