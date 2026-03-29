@@ -757,3 +757,18 @@ border-radius: 2px;
   }
 
 }
+@media (max-width: 768px) {
+
+  /* FORZAR ORDEN */
+  .grid--2 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* TARJETAS */
+  .grid--2 > div {
+    width: 100% !important;
+    margin-bottom: 25px !important;
+  }
+
+}
