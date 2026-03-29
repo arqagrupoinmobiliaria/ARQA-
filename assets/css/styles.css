@@ -796,4 +796,15 @@ border-radius: 2px;
   }
 
 }
+@media screen and (max-width: 600px) {
 
+  #firma .grid--2 {
+    display: block !important;
+  }
+
+  #firma .firma-card {
+    width: 100% !important;
+    margin-bottom: 25px;
+  }
+
+}
