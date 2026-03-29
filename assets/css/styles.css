@@ -745,3 +745,15 @@ border-radius: 2px;
   }
 
 }
+@media (max-width: 768px) {
+
+  .grid--2 {
+    display: block !important;
+  }
+
+  .firma-card {
+    width: 100% !important;
+    margin-bottom: 20px;
+  }
+
+}
