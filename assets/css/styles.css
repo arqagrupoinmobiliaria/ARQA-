@@ -703,3 +703,33 @@ border-radius: 2px;
     margin-bottom: 20px;
   }
 }
+.firma-container {
+  display: flex;
+  gap: 20px;
+}
+
+.firma-card {
+  background: #fff;
+  border-radius: 16px;
+  padding: 20px;
+  width: 48%;
+  text-align: center;
+}
+
+.firma-img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+  .firma-container {
+    flex-direction: column;
+  }
+
+  .firma-card {
+    width: 100%;
+  }
+}
