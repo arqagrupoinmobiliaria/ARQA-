@@ -772,3 +772,11 @@ border-radius: 2px;
   }
 
 }
+@media (max-width: 768px) {
+
+  .grid--2 {
+    grid-template-columns: 1fr !important;
+    display: grid !important;
+  }
+
+}
