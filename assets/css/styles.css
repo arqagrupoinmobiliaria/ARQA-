@@ -417,12 +417,11 @@ margin-right:4px;
   transform: translateY(-5px);
   box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
-.firma-card {
+.firma-card{
   display: flex;
   align-items: center;
   gap: 20px;
 }
-
 .firma-img {
   width: 120px;
   height: 120px;
@@ -461,28 +460,11 @@ margin-right:4px;
     align-items: stretch;
 }
 
-#firma .card {
-    height: 100%;
-}
-
-.firma-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
 }
 #firma .grid {
     align-items: stretch;
 }
 
-#firma .card {
-    height: 100%;
-}
-
-.firma-card {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
 /* FIX: Firma y secciones de abajo alineadas */
 #firma .grid.grid--2{
   display: grid;
@@ -662,54 +644,20 @@ border-radius: 2px;
 .modelo-btn {
   text-align: left;
 }
+/* ===== FIRMA MOBILE DEFINITIVO ===== */
+@media (max-width: 768px) {
 
-/* ===== FIRMA LIMPIA FINAL ===== */
-
-.firma-container {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 30px;
-}
-
-.firma-card {
-  width: 48px;
-  background: #fff;
-  border-radius: 16px;
-  padding: 20px;
-  text-align: center;
-}
-
-.firma-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 15px;
-}
-
-/* 📱 MOBILE FIX DEFINITIVO */
-@media screen and (max-width: 768px) {
-
-  #firma .firma-container {
-    display: flex !important;
-    flex-direction: column !important;
-    align-items: center;
+  #firma .grid.grid--2 {
+    grid-template-columns: 1fr;
   }
 
   #firma .firma-card {
-    width: 90% !important;
-    max-width: 400px !important;
-    margin-bottom: 25px !important;
+    flex-direction: column;
+    text-align: center;
   }
 
   #firma .firma-img {
-    display: block;
     margin: 0 auto 15px auto;
-  }
-
-  #firma .firma-info {
-    text-align: center;
   }
 
 }
