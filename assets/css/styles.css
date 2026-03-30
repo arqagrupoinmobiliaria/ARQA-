@@ -710,3 +710,34 @@ border-radius: 2px;
     text-align: center;
   }
 }
+@media screen and (max-width: 768px) {
+  body #firma .firma-container,
+  body #firma .firma-grid {
+    display: block !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  body #firma .firma-card {
+    display: block !important;
+    width: auto !important;
+    max-width: none !important;
+    margin: 0 20px 20px !important;
+    padding: 24px !important;
+    box-sizing: border-box !important;
+    text-align: center !important;
+  }
+
+  body #firma .firma-img {
+    display: block !important;
+    width: 140px !important;
+    height: 140px !important;
+    margin: 0 auto 16px !important;
+  }
+
+  body #firma .firma-info {
+    display: block !important;
+    width: 100% !important;
+    max-width: none !important;
+    text-align: center !important;
+  }
+}
