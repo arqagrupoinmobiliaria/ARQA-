@@ -689,17 +689,14 @@ border-radius: 2px;
 }
 
 /* 📱 MOBILE */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .firma-container {
-  display: flex !important; 
-    flex-direction: column !important;
-    align-items: center; !important;
-  gap: 20px;
+  display: block !important; 
   }
 
   .firma-card {
+    display: block !important;
     width: 90% !important;
-    max-width: 320px;
-    margin: 0 auto !important;
+    margin: 20px auto !important;
   }
 }
