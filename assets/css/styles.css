@@ -669,11 +669,11 @@ border-radius: 2px;
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 60px;
+  gap: 30px;
 }
 
 .firma-card {
-  width: 300px;
+  width: 48px;
   background: #fff;
   border-radius: 16px;
   padding: 20px;
@@ -697,6 +697,6 @@ border-radius: 2px;
 
   .firma-card {
     width: 100%;
-    max-width: 100%;
+    margin-bottom: 20%;
   }
 }
