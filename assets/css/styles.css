@@ -667,14 +667,13 @@ border-radius: 2px;
 
 .firma-container {
   display: flex;
-  gap: 40px;
   justify-content: center;
-  align-items: stretch;
+  align-items: flex-start;
+  gap: 60px;
 }
 
 .firma-card {
-  flex: 1;
-  max-width: 400px;
+  width: 300px;
   background: #fff;
   border-radius: 16px;
   padding: 20px;
