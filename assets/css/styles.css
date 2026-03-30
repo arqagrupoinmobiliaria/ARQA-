@@ -690,13 +690,15 @@ border-radius: 2px;
 
 /* 📱 MOBILE */
 @media screen and (max-width: 768px) {
+  .firma-grid,
   .firma-container {
-  display: block !important; 
+  display: flex !important;
+    flex-direction: column !important;
   }
 
   .firma-card {
-    display: block !important;
-    width: 90% !important;
+    width: 100% !important;
+    max-width: 350%px;
     margin: 20px auto !important;
   }
 }
