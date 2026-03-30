@@ -661,6 +661,12 @@ border-radius: 2px;
   }
 
 }
+.tile__img {
+  width: 100px;
+  height: auto
+  display: block;
+  border-radius: 10px;
+}
 .tile__imgs {
   display: flex;
   flex-direction: column;
