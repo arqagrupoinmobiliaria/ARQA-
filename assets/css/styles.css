@@ -827,3 +827,16 @@ border-radius: 2px;
   }
 
 }
+@media (max-width: 600px) {
+
+  .firma-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  .firma-card {
+    width: 100% !important;
+    margin-bottom: 25px;
+  }
+
+}
