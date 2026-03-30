@@ -690,82 +690,23 @@ border-radius: 2px;
 
 /* 📱 MOBILE */
 @media screen and (max-width: 768px) {
-  .firma-grid{
-    grid-template-columns: 1fr !important;
-  }
-}
- 
-  .firma-card {
-    width: 100% !important;
-    max-width: 350%px;
-    margin: 20px auto !important;
-  }
-}
-@media screen and (max-width: 768px) {
- .firma-grid {
-        grid-template-columns: 1fr !important;
-    }
-}
-/* ===== FIRMA DEFINITIVA ===== */
-
-#firma .firma-container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 24px;
-  align-items: stretch;
-}
-
-#firma .firma-card {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  background: #fff;
-  border: 1px solid #e9edf3;
-  border-radius: 18px;
-  padding: 24px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-}
-
-#firma .firma-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  flex-shrink: 0;
-  display: block;
-}
-
-#firma .firma-info {
-  min-width: 0;
-}
-
-#firma .card__title {
-  margin: 0 0 8px;
-}
-
-#firma .card__subtitle {
-  margin: 0 0 12px;
-}
-
-#firma .firma-info p {
-  margin: 0;
-}
-
-@media screen and (max-width: 768px) {
   #firma .firma-container {
     grid-template-columns: 1fr;
   }
 
   #firma .firma-card {
     display: block;
-    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto 20px;
   }
 
   #firma .firma-img {
+    display: block;
     margin: 0 auto 16px;
   }
 
   #firma .firma-info {
-    width: 100%;
+    text-align: center;
   }
 }
