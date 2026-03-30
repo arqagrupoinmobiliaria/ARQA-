@@ -661,3 +661,8 @@ border-radius: 2px;
   }
 
 }
+.tile__imgs {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
