@@ -925,3 +925,32 @@ border-radius: 2px;
   object-fit: cover !important;
   flex-shrink: 0 !important;
 }
+/* ===== FIRMA FIX FINAL (NO TOCAR NADA MÁS) ===== */
+
+#firma .grid.grid--2{
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 50px !important;
+  align-items: center !important;
+}
+
+#firma .card.firma-card{
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 20px !important;
+  text-align: left !important;
+}
+
+#firma .firma-img{
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+  margin: 0 !important;
+}
+
+#firma .firma-info{
+  flex: 1 !important;
+}
