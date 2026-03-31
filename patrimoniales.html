@@ -1,78 +1,118 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Proyectos Patrimoniales</title>
-  <link rel="stylesheet" href="assets/css/styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Proyectos Patrimoniales</title>
+
+<link rel="stylesheet" href="assets/css/styles.css">
+
+<style>
+
+.project-gallery{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.project-gallery img{
+  width:48%;
+  height:auto;
+  border-radius:12px;
+}
+
+body{
+  margin:0;
+  font-family:'Segoe UI', sans-serif;
+  background:#f7f8fa;
+  padding:60px 8%;
+}
+
+.contenedor{
+  max-width:1000px;
+  margin:auto;
+  background:white;
+  padding:40px;
+  border-radius:16px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+  margin-bottom:40px;
+}
+
+</style>
 </head>
 
 <body>
 
-<section class="section">
-  <div class="container">
+<!-- ================= PROYECTO 1 ================= -->
+<div class="contenedor">
 
-    <div class="section__head">
-      <h2 class="section__title">Proyectos Patrimoniales</h2>
-      <p class="section__lead">
-        Proyectos de rehabilitación y puesta en valor de activos históricos con enfoque técnico, cultural y arquitectónico.
-      </p>
-    </div>
+<h1>Proyecto Recoleta</h1>
 
-    <div>
+<p class="ubicacion">
+📍 Centro Histórico – Quito, Ecuador
+</p>
 
-      <!-- PROYECTO 1 (MÁS NUEVO) -->
-      <div class="tile">
-        <div class="tile__gallery">
-          <img src="assets/img/proyecto-recoleta-1.jpg" class="tile__img">
-          <img src="assets/img/proyecto-recoleta-2.jpg" class="tile__img">
-        </div>
-        <div class="tile__body">
-        <h3>Proyecto Recoleta</h3>
-          <p><strong>Ubicación:<Quito, Ecuador</p>
-          <p><strong>Año: </strong> 2022</p>
-          <p>Intervención en inmueble patrimonial ubicado en el centro histórico de Quito, 
-            adaptando el espacio a nuevas unidades habitacionales sin perder su valor histórico y arquitectónico.
-          </p>
-        </div>
-      </div>
+<p><strong>Estado:</strong> Rehabilitación</p>
+<p><strong>Año:</strong> 2010</p>
 
-      <!-- PROYECTO 2 -->
-      <div class="tile">
-        <div class="tile__gallery">
-          <img src="assets/img/diseno-teatro-1.jpg" class="tile__img">
-          <img src="assets/img/diseno-teatro-2.jpg" class="tile__img">
-        </div>
-        <div class="tile__body">
-         <h3>Teatro Colegio José Julián Andrade</h3>
-            <p><strong>Ubicación:<San Gabriel,Carchi, Ecuador</p>
-           <p><strong>Año: </strong> 2018</p>
-           <p>Diseño arquitectónico para la rehabilitación de un teatro institucional, incorporando mejoras en acústica, 
-            iluminación y funcionalidad, respetando el carácter original del espacio.
-          </p>
-        </div>
-      </div>
+<p>
+Intervención en inmueble patrimonial ubicado en el centro histórico de Quito, adaptando el espacio a nuevas unidades habitacionales sin perder su valor histórico y arquitectónico.
+</p>
 
-      <!-- PROYECTO 3 (MÁS ANTIGUO) -->
-      <div class="tile">
-        <div class="tile__gallery">
-          <img src="assets/img/museo-artesanias-1.jpg" class="tile__img">
-          <img src="assets/img/museo-artesanias-2.jpg" class="tile__img">
-        </div>
-        <div class="tile__body">
-          <h3>Museo de las Artesanías</h3>
-           <p><strong>Ubicación:<San Gabriel, Carchi, Ecuador</p>
-             <p><strong>Año: </strong> 2015</p>
-          <p>Proyecto de rehabilitación patrimonial en el centro histórico de San Gabriel (Carchi). 
-            Se intervinieron aproximadamente 330 m², integrando patios y nuevas áreas funcionales, 
-            respetando técnicas tradicionales como tapial, adobe y bahareque.
-          </p>
-        </div>
-      </div>
+<div class="project-gallery">
+    <img src="assets/img/recoleta-1.jpg" alt="Recoleta 1">
+    <img src="assets/img/recoleta-2.jpg" alt="Recoleta 2">
+</div>
 
-    </div>
+</div>
 
-  </div>
-</section>
+
+<!-- ================= PROYECTO 2 ================= -->
+<div class="contenedor">
+
+<h1>Teatro Colegio José Julián Andrade</h1>
+
+<p class="ubicacion">
+📍 San Gabriel,Carchi, Ecuador
+</p>
+
+<p><strong>Estado:</strong> Rehabilitación</p>
+<p><strong>Año:</strong> 2018</p>
+
+<p>
+Proyecto de recuperación arquitectónica de un espacio cultural, enfocado en la rehabilitación del teatro y su adaptación para nuevos usos, manteniendo su valor histórico y funcional.
+</p>
+
+<div class="project-gallery">
+    <img src="assets/img/teatro-1.jpg" alt="Teatro 1">
+    <img src="assets/img/teatro-2.jpg" alt="Teatro 2">
+</div>
+
+</div>
+
+
+<!-- ================= PROYECTO 3 ================= -->
+<div class="contenedor">
+
+<h1>Museo de las Artesanías</h1>
+
+<p class="ubicacion">
+📍 San Gabriel, Carchi, Ecuador
+</p>
+
+<p><strong>Estado:</strong> Diseño</p>
+<p><strong>Año:</strong> 2015</p>
+
+<p>
+Proyecto enfocado en la puesta en valor de un inmueble patrimonial destinado a uso cultural, integrando espacios de exhibición con criterios arquitectónicos contemporáneos respetando su identidad histórica.
+</p>
+
+<div class="project-gallery">
+    <img src="assets/img/museo-1.jpg" alt="Museo 1">
+    <img src="assets/img/museo-2.jpg" alt="Museo 2">
+</div>
+
+</div>
 
 </body>
 </html>
