@@ -901,3 +901,6 @@ border-radius: 2px;
   border-radius: 50%;
   object-fit: cover;
 }
+#firma .contenedor > div{
+  width: 45% !important;
+}
