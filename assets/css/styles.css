@@ -698,3 +698,57 @@ border-radius: 2px;
   margin: 0 auto;
 }
 
+/* ===== RESTAURAR SECCIÓN FIRMA ===== */
+#firma .firma-container{
+  display:grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap:24px !important;
+  align-items:stretch !important;
+}
+
+#firma .firma-card{
+  display:flex !important;
+  align-items:center !important;
+  gap:20px !important;
+  background:#fff !important;
+  border-radius:16px !important;
+  padding:24px !important;
+  text-align:left !important;
+}
+
+#firma .firma-img{
+  width:120px !important;
+  height:120px !important;
+  border-radius:50% !important;
+  object-fit:cover !important;
+  flex-shrink:0 !important;
+  margin:0 !important;
+}
+
+#firma .firma-info{
+  text-align:left !important;
+}
+
+#firma .firma-info h3,
+#firma .firma-info p{
+  margin:0 0 8px 0;
+}
+
+@media (max-width: 768px){
+  #firma .firma-container{
+    grid-template-columns: 1fr !important;
+  }
+
+  #firma .firma-card{
+    flex-direction:column !important;
+    text-align:center !important;
+  }
+
+  #firma .firma-info{
+    text-align:center !important;
+  }
+
+  #firma .firma-img{
+    margin:0 auto 15px auto !important;
+  }
+}
