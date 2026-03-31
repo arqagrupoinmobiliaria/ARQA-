@@ -878,3 +878,26 @@ border-radius: 2px;
 .persona div{
   font-size: 14px;
 }
+/* ===== FIRMA EN 2 COLUMNAS (SIN TOCAR HTML) ===== */
+
+#firma .contenedor{
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+#firma .contenedor > div{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  width: 45%;
+  min-width: 280px;
+}
+
+#firma img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
