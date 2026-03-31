@@ -675,25 +675,26 @@ border-radius: 2px;
   gap: 15px;
   margin-bottom: 15px;
 }
-/* ===== FIX FINAL PATRIMONIALES ===== */
+/* ===== FIX REAL PATRIMONIALES ===== */
 
-.patrimoniales .tile__gallery {
-  display: grid !important;
-  grid-template-columns: repeat(2, 300px);
+.project-gallery{
+  display: flex;
+  flex-wrap: wrap;
   gap: 15px;
-  width: max-content;
-  margin: 0 auto 15px auto;
+
+  justify-content: center;
+  width: fit-content;
+  margin: 20px auto;
 }
-.tile__img {
-  width: 100% !important;
-  height: 220px;
-  object-fit: cover;
+
+.project-gallery img{
+  width: 48%;
   border-radius: 10px;
-  display: block;
 }
-.img-vertical {
+
+.img-vertical{
   width: 65% !important;
- display: block;
+  display: block;
   margin: 0 auto;
 }
 
