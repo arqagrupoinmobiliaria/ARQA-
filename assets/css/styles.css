@@ -904,3 +904,24 @@ border-radius: 2px;
 #firma .contenedor > div{
   width: 45% !important;
 }
+/* ===== FIX DEFINITIVO FIRMA ===== */
+
+#firma .grid--2{
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 40px !important;
+}
+
+#firma .firma-card{
+  display: flex !important;
+  align-items: center !important;
+  gap: 20px !important;
+}
+
+#firma .firma-img{
+  width: 90px !important;
+  height: 90px !important;
+  border-radius: 50% !important;
+  object-fit: cover !important;
+  flex-shrink: 0 !important;
+}
