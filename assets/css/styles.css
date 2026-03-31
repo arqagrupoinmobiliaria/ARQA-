@@ -696,6 +696,6 @@ border-radius: 2px;
 }
 .img-vertical {
   width: 65% !important;
-  height: auto !important;
-  object-fit: contain !important;
+ display: block;
+  margin: 0 auto;
 }
