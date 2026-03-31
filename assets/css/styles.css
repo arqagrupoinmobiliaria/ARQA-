@@ -680,14 +680,13 @@ border-radius: 2px;
 .tile {
   display: block !important;
 }
-
 .tile__gallery {
-  display: flex !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 300px);
+  justify-content: center;
   gap: 15px;
-  flex-wrap: wrap;
-  align-items: flex-start;
+  margin-bottom: 15px;
 }
-
 .tile__img {
   width: 48% !important;
   height: auto !important;
@@ -698,4 +697,7 @@ border-radius: 2px;
   width: 65% !important;
  display: block;
   margin: 0 auto;
+}
+.tile__gallery {
+  justify-content: center !important;
 }
