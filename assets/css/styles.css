@@ -644,37 +644,7 @@ border-radius: 2px;
 .modelo-btn {
   text-align: left;
 }
-/* ===== FIRMA MOBILE DEFINITIVO ===== */
-@media (max-width: 768px) {
 
-  #firma .grid.grid--2 {
-    grid-template-columns: 1fr;
-  }
-
-  #firma .firma-card {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  #firma .firma-img {
-    margin: 0 auto 15px auto;
-  }
-
-.tile__img {
-  width: 100px;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 10px;
-  display: block;
-}
-  
-/* ===== GALERÍA PROYECTOS ===== */
-.tile__gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 15px;
-  margin-bottom: 15px;
-}
 /* ===== FIX REAL PATRIMONIALES ===== */
 
 .patrimoniales .project-gallery{
@@ -697,260 +667,62 @@ border-radius: 2px;
   margin: 0 auto;
 }
 
-/* ===== RESTAURAR SECCIÓN FIRMA ===== */
+/* ===== FIRMA FIX LIMPIO ===== */
+
 #firma .firma-container{
-  display:grid !important;
-  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  gap:24px !important;
-  align-items:stretch !important;
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  flex-wrap: wrap;
+  margin-top: 32px;
 }
 
 #firma .firma-card{
-  display:flex !important;
-  align-items:center !important;
-  gap:20px !important;
-  background:#fff !important;
-  border-radius:16px !important;
-  padding:24px !important;
-  text-align:left !important;
+  width: 320px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 24px 20px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  display: block;
 }
 
 #firma .firma-img{
-  width:120px !important;
-  height:120px !important;
-  border-radius:50% !important;
-  object-fit:cover !important;
-  flex-shrink:0 !important;
-  margin:0 !important;
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 16px;
 }
 
 #firma .firma-info{
-  text-align:left !important;
+  display: block;
 }
 
-#firma .firma-info h3,
-#firma .firma-info p{
-  margin:0 0 8px 0;
+#firma .firma-card h3{
+  margin-bottom: 8px;
+}
+
+#firma .firma-card .card__subtitle{
+  margin-bottom: 12px;
+  color: #666;
+  font-weight: 600;
+}
+
+#firma .firma-card p{
+  margin: 0;
+  line-height: 1.6;
 }
 
 @media (max-width: 768px){
   #firma .firma-container{
-    grid-template-columns: 1fr !important;
+    flex-direction: column;
+    align-items: center;
   }
 
   #firma .firma-card{
-    flex-direction:column !important;
-    text-align:center !important;
+    width: 100%;
+    max-width: 340px;
   }
-
-  #firma .firma-info{
-    text-align:center !important;
-  }
-
-  #firma .firma-img{
-    margin:0 auto 15px auto !important;
-  }
-}
-
-/* ===== FIX FIRMA (CENTRADO) ===== */
-
-#firma{
-  text-align: center;
-}
-
-#firma .contenedor{
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-#firma .persona{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-  margin-bottom: 25px;
-  text-align: left;
-}
-
-#firma .persona img{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-}
-
-#firma .persona-info{
-  max-width: 500px;
-}
-/* ===== FIX FIRMA SIMPLE ===== */
-
-#firma .contenedor{
-  margin: 0 auto;
-  max-width: 900px;
-}
-
-#firma img{
-  display: block;
-  margin-bottom: 10px;
-}
-/* ===== CONTROL FIRMA ===== */
-
-#firma{
-  padding: 40px 20px;
-}
-
-#firma .contenedor{
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-#firma h1{
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-#firma > p{
-  text-align: center;
-  margin-bottom: 40px;
-}
-/* ===== REDUCIR TARJETAS FIRMA ===== */
-
-#firma .contenedor{
-  max-width: 650px;
-  margin: 0 auto;
-}
-
-#firma img{
-  width: 70px;
-  height: 70px;
-}
-
-#firma p{
-  font-size: 14px;
-  line-height: 1.4;
-}
-
-#firma h3{
-  font-size: 16px;
-  margin-bottom: 5px;
-}
-/* ===== FIRMA HORIZONTAL ===== */
-
-#firma .contenedor > div{
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  margin-bottom: 25px;
-}
-
-#firma .contenedor img{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-#firma .contenedor div > div{
-  max-width: 500px;
-}
-/* ===== FIRMA 2 COLUMNAS ===== */
-
-.firma-grid{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.persona{
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.persona img{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.persona div{
-  font-size: 14px;
-}
-/* ===== FIRMA EN 2 COLUMNAS (SIN TOCAR HTML) ===== */
-
-#firma .contenedor{
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  flex-wrap: wrap;
-}
-
-#firma .contenedor > div{
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  width: 45%;
-  min-width: 280px;
-}
-
-#firma img{
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-#firma .contenedor > div{
-  width: 45% !important;
-}
-/* ===== FIX DEFINITIVO FIRMA ===== */
-
-#firma .grid--2{
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 40px !important;
-}
-
-#firma .firma-card{
-  display: flex !important;
-  align-items: center !important;
-  gap: 20px !important;
-}
-
-#firma .firma-img{
-  width: 90px !important;
-  height: 90px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  flex-shrink: 0 !important;
-}
-/* ===== FIRMA FIX FINAL (NO TOCAR NADA MÁS) ===== */
-
-#firma .grid.grid--2{
-  display: grid !important;
-  grid-template-columns: 1fr 1fr !important;
-  gap: 50px !important;
-  align-items: center !important;
-}
-
-#firma .card.firma-card{
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  gap: 20px !important;
-  text-align: left !important;
-}
-
-#firma .firma-img{
-  width: 90px !important;
-  height: 90px !important;
-  border-radius: 50% !important;
-  object-fit: cover !important;
-  flex-shrink: 0 !important;
-  margin: 0 !important;
-}
-
-#firma .firma-info{
-  flex: 1 !important;
 }
