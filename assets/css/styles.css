@@ -675,3 +675,23 @@ border-radius: 2px;
   gap: 15px;
   margin-bottom: 15px;
 }
+/* ===== FIX FINAL PATRIMONIALES ===== */
+
+.tile {
+  display: block !important;
+}
+
+.tile__gallery {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.tile__img {
+  width: 100% !important;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 10px;
+  display: block;
+}
