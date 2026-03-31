@@ -663,12 +663,15 @@ border-radius: 2px;
 }
 .tile__img {
   width: 100px;
-  height: auto
-  display: block;
+  height: 220px;
+  object-fit: cover;
   border-radius: 10px;
+  display: block;
 }
-.tile__imgs {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+/* ===== GALERÍA PROYECTOS ===== */
+.tile__gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
 }
