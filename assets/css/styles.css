@@ -781,3 +781,14 @@ border-radius: 2px;
 #firma .persona-info{
   max-width: 500px;
 }
+/* ===== FIX FIRMA SIMPLE ===== */
+
+#firma .contenedor{
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+#firma img{
+  display: block;
+  margin-bottom: 10px;
+}
