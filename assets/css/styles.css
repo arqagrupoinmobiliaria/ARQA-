@@ -695,7 +695,7 @@ border-radius: 2px;
   border-radius: 10px;
 }
 .img-vertical {
-  width: 45% !important;
+  width: 60% !important;
   height: auto !important;
   object-fit: contain !important;
 }
