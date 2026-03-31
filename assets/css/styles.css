@@ -812,3 +812,24 @@ border-radius: 2px;
   text-align: center;
   margin-bottom: 40px;
 }
+/* ===== REDUCIR TARJETAS FIRMA ===== */
+
+#firma .contenedor{
+  max-width: 650px;
+  margin: 0 auto;
+}
+
+#firma img{
+  width: 70px;
+  height: 70px;
+}
+
+#firma p{
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+#firma h3{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
