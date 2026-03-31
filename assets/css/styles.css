@@ -683,15 +683,16 @@ border-radius: 2px;
 .tile__gallery {
   display: grid !important;
   grid-template-columns: repeat(2, 300px);
-  justify-content: center;
   gap: 15px;
-  margin-bottom: 15px;
+  width: max-content;
+  margin: 0 auto 15px auto;
 }
 .tile__img {
-  width: 48% !important;
-  height: auto !important;
+  width: 100% !important;
+  height: 220px;
   object-fit: cover;
   border-radius: 10px;
+  display: block;
 }
 .img-vertical {
   width: 65% !important;
