@@ -752,3 +752,17 @@ border-radius: 2px;
     margin:0 auto 15px auto !important;
   }
 }
+/* ===== FIX HOME CARDS ===== */
+
+.cards img,
+.card img{
+  width: 100% !important;
+  height: 220px !important;
+  object-fit: cover !important;
+  margin: 0 !important;
+}
+
+.cards,
+.card-container{
+  width: 100% !important;
+}
