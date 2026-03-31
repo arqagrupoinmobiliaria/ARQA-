@@ -752,3 +752,32 @@ border-radius: 2px;
   }
 }
 
+/* ===== FIX FIRMA (CENTRADO) ===== */
+
+#firma{
+  text-align: center;
+}
+
+#firma .contenedor{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#firma .persona{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+#firma .persona img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+
+#firma .persona-info{
+  max-width: 500px;
+}
