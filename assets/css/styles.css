@@ -677,22 +677,21 @@ border-radius: 2px;
 }
 /* ===== FIX REAL PATRIMONIALES ===== */
 
-.project-gallery{
+.patrimoniales .project-gallery{
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
-
   justify-content: center;
   width: fit-content;
   margin: 20px auto;
 }
 
-.project-gallery img{
+.patrimoniales .project-gallery img{
   width: 48%;
   border-radius: 10px;
 }
 
-.img-vertical{
+.patrimoniales .img-vertical{
   width: 65% !important;
   display: block;
   margin: 0 auto;
@@ -752,17 +751,4 @@ border-radius: 2px;
     margin:0 auto 15px auto !important;
   }
 }
-/* ===== FIX HOME CARDS ===== */
 
-.cards img,
-.card img{
-  width: 100% !important;
-  height: 220px !important;
-  object-fit: cover !important;
-  margin: 0 !important;
-}
-
-.cards,
-.card-container{
-  width: 100% !important;
-}
