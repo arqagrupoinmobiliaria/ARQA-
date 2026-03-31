@@ -695,3 +695,6 @@ border-radius: 2px;
   border-radius: 10px;
   display: block;
 }
+.img-vertical {
+  width: 30% !important;
+}
