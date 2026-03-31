@@ -792,3 +792,23 @@ border-radius: 2px;
   display: block;
   margin-bottom: 10px;
 }
+/* ===== CONTROL FIRMA ===== */
+
+#firma{
+  padding: 60px 20px;
+}
+
+#firma .contenedor{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+#firma h1{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+#firma > p{
+  text-align: center;
+  margin-bottom: 40px;
+}
