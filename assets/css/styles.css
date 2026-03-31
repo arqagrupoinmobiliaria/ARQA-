@@ -852,3 +852,29 @@ border-radius: 2px;
 #firma .contenedor div > div{
   max-width: 500px;
 }
+/* ===== FIRMA 2 COLUMNAS ===== */
+
+.firma-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.persona{
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.persona img{
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.persona div{
+  font-size: 14px;
+}
