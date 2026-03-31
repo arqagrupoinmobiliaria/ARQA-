@@ -677,12 +677,6 @@ border-radius: 2px;
 }
 /* ===== FIX FINAL PATRIMONIALES ===== */
 
-.tile {
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* 👈 ESTO CENTRA TODO */
-}
-
 .patrimoniales .tile__gallery {
   display: grid !important;
   grid-template-columns: repeat(2, 300px);
@@ -702,6 +696,4 @@ border-radius: 2px;
  display: block;
   margin: 0 auto;
 }
-.tile__gallery {
-  justify-content: center !important;
-}
+
