@@ -682,19 +682,20 @@ border-radius: 2px;
 }
 
 .tile__gallery {
-  display: grid !important;
-  grid-template-columns: 1fr 1fr;
+  display: flex !important;
   gap: 15px;
-  margin-bottom: 15px;
+  flex-wrap: wrap;
+  align-items: flex-start;
 }
 
 .tile__img {
-  width: 100% !important;
-  height: 220px;
+  width: 48% !important;
+  height: auto !important;
   object-fit: cover;
   border-radius: 10px;
-  display: block;
 }
 .img-vertical {
   width: 30% !important;
+  height: auto !important;
+  object-fit: contain !important;
 }
